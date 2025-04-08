@@ -1,0 +1,301 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<style>
+
+</style>
+
+<body class="min-w-[360px]">
+    <div class="mask hidden h-screen w-screen bg-black opacity-60 z-10 fixed"></div>
+    <!-- navbar -->
+    <nav class="bg-black py-2">
+        <div class="container mx-auto px-6 lg:max-w-[1200px]">
+            <div class="grid items-center justify-between grid-flow-col gap-5">
+                <div class="space-y-2">
+                    <a href="index.html" class="text-2xl font-semibold"><img class="w-[100px]"
+                            src="accets/images/Logo.png" alt=""></a>
+                </div>
+
+                <div
+                    class="responsive-nav lg:relative fixed duration-300 max-lg:top-0 max-lg:-left-96 z-20 max-lg:h-screen max-lg:p-8 lg:bg-black bg-white">
+                    <ul
+                        class="flex lg:justify-between max-lg:flex-col xl:gap-8 lg:gap-4 lg:text-white text-black gap-6">
+                        <a class="text-nowrap" href="index.html">
+                            <li>Home</li>
+                        </a>
+                        <a class="text-nowrap" href="What-We-Do.html">
+                            <li>What We Do</li>
+                        </a>
+                        <a class="text-nowrap" href="How-It-Works.html">
+                            <li>How It Works</li>
+                        </a>
+                        <div class="relative max-lg:hidden group">
+                            <a class="text-nowrap">
+                                <li>Services <i class="ri-arrow-down-s-line"></i></li>
+                            </a>
+                            <div class="absolute z-10 hidden group-hover:block bg-white text-black border rounded">
+                                <ul class="">
+                                    <a class="text-nowrap" href="Social-Media-Management.html">
+                                        <li class="border-t p-3 text-sm hover:bg-primary hover:text-white duration-300">
+                                            Social Media Management</li>
+                                    </a>
+                                    <a class="text-nowrap" href="Search-Engine-Optimization.html">
+                                        <li class="border-t p-3 text-sm hover:bg-primary hover:text-white duration-300">
+                                            Search Engine Optimization</li>
+                                    </a>
+                                    <a class="text-nowrap" href="Email-Marketing-Services.html">
+                                        <li class="border-t p-3 text-sm hover:bg-primary hover:text-white duration-300">
+                                            Email Marketing Services</li>
+                                    </a>
+                                    <a class="text-nowrap" href="Videography-Photography.html">
+                                        <li class="border-t p-3 text-sm hover:bg-primary hover:text-white duration-300">
+                                            Videography/Photography</li>
+                                    </a>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="lg:hidden">
+                            <div class="accordian-head flex items-center justify-between pb-3 cursor-pointer">
+                                <div class="font-semibold align-middle">Our Services </div>
+                                <i
+                                    class="ri-add-line text-black rounded-full px-2 py-1 text-sx transition border duration-500 ease-in-out bg-slate-100"></i>
+                            </div>
+                            <div class="accordian-body acc-collapse">
+                                <ul class="">
+                                    <a class="text-nowrap" href="Social-Media-Management.html">
+                                        <li class="border-slate-200 px-3 py-2 text-sm">Social Media Management</li>
+                                    </a>
+                                    <a class="text-nowrap" href="Search-Engine-Optimization.html">
+                                        <li class="border-slate-200 px-3 py-2 text-sm">Search Engine Optimization
+                                        </li>
+                                    </a>
+                                    <a class="text-nowrap" href="Email-Marketing-Services.html">
+                                        <li class="border-slate-200 px-3 py-2 text-sm">Email Marketing Services</li>
+                                    </a>
+                                    <a class="text-nowrap" href="Videography-Photography.html">
+                                        <li class="border-slate-200 px-3 py-2 text-sm">Videography/Photography</li>
+                                    </a>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <a class="text-nowrap" href="Pricing-and-Packages.html">
+                            <li>Pricing and Packages</li>
+                        </a>
+                        <!-- <a class="text-nowrap" href="Testimonials.html">
+                            <li>Testimonials</li>
+                        </a> -->
+                        <a class="text-nowrap" href="Blog.html">
+                            <li>Blogs</li>
+                        </a>
+                        <a class="lg:hidden text-nowrap" href="tel:(786)-416-6767">
+                            <li><i class="ri-phone-line text-primary text-2xl"></i> (786)-416-6767</li>
+                        </a>
+                        <a class="lg:hidden text-nowrap" href="mailto:(786)-416-6767">
+                            <li><i class="ri-mail-line text-primary text-2xl"></i> info@thehomedefenders.com</li>
+                        </a>
+                    </ul>
+                </div>
+
+                <div>
+                    <a href="Contact-Us.html">
+                        <button
+                            class="lg:block hidden bg-white hover:bg-primary hover:text-white duration-300 px-4 py-2 rounded-3xl text-nowrap">
+                            GET IN
+                            TOUCH</button>
+                    </a>
+                    <a class="lg:hidden" href="#">
+                        <li><i class="ri-menu-3-line text-white text-2xl rounded-full nav-Toggle"></i></li>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- navbar end -->
+
+    <section class="py-5 lg:px-10 px-3 overflow-hidden">
+        <div class="container mx-auto px-6 lg:max-w-[1200px] space-y-4">
+            <div class="grid md:grid-cols-2 gap-6">
+                <div
+                    class="flex flex-col justify-between gap-5 p-7 text-white bg-black rounded-xl bg-right-bottom bg-[url('accets/images/img-423fd.png')] bg-no-repeat">
+                    <div>
+                        <div class="lg:text-3xl text-2xl font-semibold">Contact Information</div>
+                        <div>Say something to start a live chat!</div>
+                    </div>
+
+                    <ul class="space-y-9">
+                        <li><i class="ri-phone-line"></i> +1012 3456 789</li>
+                        <li><i class="ri-mail-line"></i> info@aurumhouse.com</li>
+                        <li><i class="ri-map-pin-line"></i> 132 Dartmouth Street Boston, <br> Massachusetts 02156 United
+                            States</li>
+                    </ul>
+
+
+                    <div class="space-x-4">
+                        <i class="bg-gray-900 p-2 rounded-full ri-twitter-fill"></i>
+                        <i class="bg-white text-black p-2 rounded-full ri-instagram-line"></i>
+                        <i class="bg-gray-900 p-2 rounded-full ri-discord-fill"></i>
+                    </div>
+                </div>
+
+                <div class="space-y-7">
+                    <form class="space-y-7" action="#">
+                        <div class="grid grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label class="font-semibold" for="">First Name</label>
+                                <input class="border-b border-black outline-none py-2 w-full" type="text"
+                                    placeholder="First Name">
+                            </div>
+                            <div class="space-y-2">
+                                <label class="font-semibold" for="">First Name</label>
+                                <input class="border-b border-black outline-none py-2 w-full" type="text"
+                                    placeholder="Last Name">
+                            </div>
+                        </div>
+
+
+                        <div class="grid grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label class="font-semibold" for="">Email</label>
+                                <input class="border-b border-black outline-none py-2 w-full" type="text"
+                                    placeholder="First Name">
+                            </div>
+                            <div class="space-y-2">
+                                <label class="font-semibold" for="">Phone Number</label>
+                                <input class="border-b border-black outline-none py-2 w-full" type="text"
+                                    placeholder="Last Name">
+                            </div>
+                        </div>
+
+                        <div class="font-semibold">Which Service are you intrested in?</div>
+
+                        <ul class="flex flex-wrap gap-4">
+                            <li><input type="radio" name="check" id="01"> <label class="text-nowrap" for="01"> Social
+                                    Media Management</label></li>
+                            <li><input type="radio" name="check" id="02"> <label class="text-nowrap" for="02"> Search
+                                    Engine Optimization</label></li>
+                            <li><input type="radio" name="check" id="03"> <label class="text-nowrap" for="03"> Email
+                                    Campaigns</label></li>
+                            <li><input type="radio" name="check" id="04"> <label class="text-nowrap" for="04"> Website
+                                    Development</label></li>
+                            <li><input type="radio" name="check" id="05"> <label class="text-nowrap" for="05">
+                                    Videography/Photography</label></li>
+                        </ul>
+
+                        <div class="space-y-2">
+                            <label class="font-semibold" for="">Message</label>
+                            <input class="border-b border-black outline-none py-2 w-full" type="text"
+                                placeholder="Write your message..">
+                        </div>
+
+                        <button class="bg-black text-white px-4 py-2 rounded-md">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black text-white overflow-hidden">
+        <div class="container mx-auto px-6 lg:max-w-[1200px] py-12" data-aos="fade-up">
+            <div class="grid max-sm:text-center lg:grid-cols-4 md:gap-16 sm:gap-3 sm:grid-cols-3 grid-cols-1 gap-12">
+                <div class="lg:col-span-1 md:col-span-3">
+                    <a href="index.html">
+                        <img class="block mx-auto lg:h-[100px] h-[150px] lg:w-[100px] w-[150px] object-cover"
+                            src="accets/images/Logo.png" alt="">
+                    </a>
+                    <div class="my-4 text-sm">We don’t just market brands we build them. Whether you're a startup making
+                        your
+                        debut or an established business ready for the next level, we craft data driven, results focused
+                        marketing strategies that set you apart. </div>
+                </div>
+                <div>
+                    <div class="w-fit mx-auto">
+                        <ul class="space-y-2">
+                            <li><a class="text-xl font-semibold">Pages</a></li>
+                            <li><a class="text-sm" href="index.html">Home</a></li>
+                            <li><a class="text-sm" href="What-We-Do.html">What We Do</a></li>
+                            <li><a class="text-sm" href="How-It-Works.html">How It Works</a></li>
+                            <li><a class="text-sm" href="Pricing-and-Packages.html">Pricing and Packages</a></li>
+                            <li><a class="text-sm" href="Testimonials.html">Testimonials</a></li>
+                            <li><a class="text-sm" href="Blog.html">Blogs</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <div class="w-fit mx-auto">
+                        <ul class="space-y-2">
+                            <li><a class="text-xl font-semibold">Services</a></li>
+                            <li><a class="text-sm" href="Social-Media-Management.html">Social Media Management</a>
+                            </li>
+                            <li><a class="text-sm" href="Search-Engine-Optimization.html">Search Engine
+                                    Optimization</a>
+                            </li>
+                            <li><a class="text-sm" href="Email-Marketing-Services.html">Email Marketing Services</a>
+                            </li>
+                            <li><a class="text-sm" href="Videography-Photography.html">Videography/Photography</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <div class="w-fit mx-auto">
+                        <ul class="space-y-2">
+                            <li><a class="text-xl font-semibold">Newsletter</a></li>
+                            <li
+                                class="bg-white border overflow-hidden flex justify-between rounded-full md:w-auto w-[300px] mx-auto">
+                                <input class="outline-none text-neutral-600 text-sm pl-3 w-full" type="text"
+                                    placeholder="Enter your email here">
+                                <button
+                                    class="bg-neutral-800 hover:bg-primary hover:text-white duration-300 p-2 py-3 text-xs border-0">SUBSCRIBE</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-black">
+            <div class="container mx-auto px-6 lg:max-w-[1200px] md:border-t border-slate-700 py-3">
+                <div class="grid items-center max-sm:text-center md:grid-flow-col md:gap-5 gap-12">
+                    <div>
+                        <div class="font-semibold">Copyright by</div>
+                        <div>Aurum House Marketing Agency</div>
+                    </div>
+                    <div>
+                        <div class="font-semibold">Contact Us</div>
+                        <div>info@aurumhouse.com</div>
+                    </div>
+                    <div class="space-x-4 text-center">
+                        <i
+                            class="text-xl p-1 bg-white hover:bg-primary hover:text-white duration-300 cursor-pointer text-black rounded-md ri-facebook-line"></i>
+                        <i
+                            class="text-xl p-1 bg-white hover:bg-primary hover:text-white duration-300 cursor-pointer text-black rounded-md ri-instagram-line"></i>
+                        <i
+                            class="text-xl p-1 bg-white hover:bg-primary hover:text-white duration-300 cursor-pointer text-black rounded-md ri-linkedin-box-line"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        AOS.init({
+            once: true,
+            duration: 1000
+        });
+    </script>
+</body>
+
+</html>

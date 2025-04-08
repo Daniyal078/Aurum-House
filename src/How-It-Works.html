@@ -1,0 +1,638 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<style>
+    .acc-collapse {
+        height: 0px;
+        overflow-y: hidden;
+        transition: 0.3s ease-in;
+    }
+
+    .box::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 0%;
+        width: 0%;
+        border-radius: 100%;
+        /* background: linear-gradient(180deg, rgba(59, 68, 67, 0) 0%, rgba(59, 68, 67, 0.42) 100%); */
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.671)), url('accets/images/bg-7098phj.jpg');
+        backdrop-filter: blur(10px);
+        z-index: -1;
+    }
+
+    .box::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 0%;
+        width: 0%;
+        border-radius: 100%;
+        background: linear-gradient(180deg, rgba(59, 68, 67, 0) 0%, rgba(59, 68, 67, 0.42) 100%);
+        /* background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.671)), url('accets/images/bg-7098phj.jpg'); */
+        backdrop-filter: blur(5px);
+        z-index: -1;
+    }
+
+    .box:hover::before {
+        width: 100%;
+        height: 100%;
+        transition: all 0.8s ease;
+    }
+
+    .box:hover::after {
+        width: 100%;
+        height: 100%;
+        transition: all 0.8s ease;
+    }
+
+    .box:hover {
+        color: #fff;
+    }
+
+    .box:hover img {
+        mix-blend-mode: lighten;
+    }
+</style>
+
+<body class="min-w-[360px]">
+    <div class="mask hidden h-screen w-screen bg-black opacity-60 z-10 fixed"></div>
+    <!-- navbar -->
+    <nav class="bg-black py-2">
+        <div class="container mx-auto px-6 lg:max-w-[1200px]">
+            <div class="grid items-center justify-between grid-flow-col gap-5">
+                <div class="space-y-2">
+                    <a href="index.html" class="text-2xl font-semibold"><img class="w-[100px]"
+                            src="accets/images/Logo.png" alt=""></a>
+                </div>
+
+                <div
+                    class="responsive-nav lg:relative fixed duration-300 max-lg:top-0 max-lg:-left-96 z-20 max-lg:h-screen max-lg:p-8 lg:bg-black bg-white">
+                    <ul
+                        class="flex lg:justify-between max-lg:flex-col xl:gap-8 lg:gap-4 lg:text-white text-black gap-6">
+                        <a class="text-nowrap" href="index.html">
+                            <li>Home</li>
+                        </a>
+                        <a class="text-nowrap" href="What-We-Do.html">
+                            <li>What We Do</li>
+                        </a>
+                        <a class="text-nowrap" href="How-It-Works.html">
+                            <li>How It Works</li>
+                        </a>
+                        <div class="relative max-lg:hidden group">
+                            <a class="text-nowrap">
+                                <li>Services <i class="ri-arrow-down-s-line"></i></li>
+                            </a>
+                            <div class="absolute z-10 hidden group-hover:block bg-white text-black border rounded">
+                                <ul class="">
+                                    <a class="text-nowrap" href="Social-Media-Management.html">
+                                        <li class="border-t p-3 text-sm hover:bg-primary hover:text-white duration-300">
+                                            Social Media Management</li>
+                                    </a>
+                                    <a class="text-nowrap" href="Search-Engine-Optimization.html">
+                                        <li class="border-t p-3 text-sm hover:bg-primary hover:text-white duration-300">
+                                            Search Engine Optimization</li>
+                                    </a>
+                                    <a class="text-nowrap" href="Email-Marketing-Services.html">
+                                        <li class="border-t p-3 text-sm hover:bg-primary hover:text-white duration-300">
+                                            Email Marketing Services</li>
+                                    </a>
+                                    <a class="text-nowrap" href="Videography-Photography.html">
+                                        <li class="border-t p-3 text-sm hover:bg-primary hover:text-white duration-300">
+                                            Videography/Photography</li>
+                                    </a>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="lg:hidden">
+                            <div class="accordian-head flex items-center justify-between pb-3 cursor-pointer">
+                                <div class="font-semibold align-middle">Our Services </div>
+                                <i
+                                    class="ri-add-line text-black rounded-full px-2 py-1 text-sx transition border duration-500 ease-in-out bg-slate-100"></i>
+                            </div>
+                            <div class="accordian-body acc-collapse">
+                                <ul class="">
+                                    <a class="text-nowrap" href="Social-Media-Management.html">
+                                        <li class="border-slate-200 px-3 py-2 text-sm">Social Media Management</li>
+                                    </a>
+                                    <a class="text-nowrap" href="Search-Engine-Optimization.html">
+                                        <li class="border-slate-200 px-3 py-2 text-sm">Search Engine Optimization
+                                        </li>
+                                    </a>
+                                    <a class="text-nowrap" href="Email-Marketing-Services.html">
+                                        <li class="border-slate-200 px-3 py-2 text-sm">Email Marketing Services</li>
+                                    </a>
+                                    <a class="text-nowrap" href="Videography-Photography.html">
+                                        <li class="border-slate-200 px-3 py-2 text-sm">Videography/Photography</li>
+                                    </a>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <a class="text-nowrap" href="Pricing-and-Packages.html">
+                            <li>Pricing and Packages</li>
+                        </a>
+                        <!-- <a class="text-nowrap" href="Testimonials.html">
+                            <li>Testimonials</li>
+                        </a> -->
+                        <a class="text-nowrap" href="Blog.html">
+                            <li>Blogs</li>
+                        </a>
+                        <a class="lg:hidden text-nowrap" href="tel:(786)-416-6767">
+                            <li><i class="ri-phone-line text-primary text-2xl"></i> (786)-416-6767</li>
+                        </a>
+                        <a class="lg:hidden text-nowrap" href="mailto:(786)-416-6767">
+                            <li><i class="ri-mail-line text-primary text-2xl"></i> info@thehomedefenders.com</li>
+                        </a>
+                    </ul>
+                </div>
+
+                <div>
+                    <a href="Contact-Us.html">
+                        <button
+                            class="lg:block hidden bg-white hover:bg-primary hover:text-white duration-300 px-4 py-2 rounded-3xl text-nowrap">
+                            GET IN
+                            TOUCH</button>
+                    </a>
+                    <a class="lg:hidden" href="#">
+                        <li><i class="ri-menu-3-line text-white text-2xl rounded-full nav-Toggle"></i></li>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- navbar end -->
+
+
+    <!-- hero section -->
+    <section class="bg-[url(accets/images/bg-u09ohwe.png)] bg-cover bg-center bg-no-repeat overflow-hidden">
+        <div class="bg-[#000000d0] bg-opacity-90 h-full lg:py-20 py-10">
+            <div class="container mx-auto px-6 lg:max-w-[1200px]">
+                <div class="grid items-center justify-around md:grid-flow-col gap-10">
+                    <div class="space-y-5" data-aos="fade-right">
+                        <h1 class="xl:text-5xl text-4xl text-white font-bold"><span
+                                class="text-primary">Elevate</span>Your Brand with Data-Driven Marketing
+                        </h1>
+                        <div class="xl:text-xl font-medium text-white">A strong digital presence requires more than just
+                            content—it demands a strategic, data-backed approach that aligns with your business goals
+                            and delivers measurable results. At Aurum House Marketing Agency, we specialize in social
+                            media management, content creation, SEO, and paid advertising designed to enhance
+                            visibility, increase engagement, and drive conversions.
+                            <br>
+                            <br>
+                            We tailor every strategy to your brand’s unique needs. Our team researches the market,
+                            analyzes audience behavior, and crafts data-driven marketing strategies that drive sustained
+                            growth. Whether you want to establish industry authority, generate leads, or scale your
+                            business, we design each campaign for maximum impact.
+                        </div>
+                    </div>
+                    <div class="lg:block hidden" data-aos="fade-left">
+                        <img src="accets/images/Group 143725921.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- hero section end -->
+
+
+    <section class="py-10 overflow-hidden">
+        <div class="container mx-auto px-6 lg:max-w-[1200px] space-y-3">
+            <div class="text-center md:text-4xl text-3xl font-bold" data-aos="fade-down">Comprehensive <span
+                    class="text-primary"> Marketing
+                    Solutions</span></div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-black rounded-lg p-5 space-y-4" data-aos="fade-right">
+                    <img src="accets/images/Layer_1 (3).png" alt="">
+                    <div class="text-2xl font-semibold text-primary">Website Development & Optimization</div>
+                    <div class="text-white">We handle every aspect of your social media presence, from content strategy
+                        and publishing to audience engagement and performance analysis. Our approach focuses on
+                        platform-specific optimization, ensuring your brand remains relevant and competitive.
+                        <ul class="pl-6 list-disc">
+                            <li>Strategic content scheduling and post-management</li>
+                            <li>Community engagement and audience interaction</li>
+                            <li>Social listening and competitor analysis</li>
+                            <li>Monthly performance reporting with data-driven insights</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bg-black rounded-lg p-5 space-y-4" data-aos="fade-left">
+                    <img src="accets/images/Layer_1 (4).png" alt="">
+                    <div class="text-2xl font-semibold text-primary">Content Creation & Branding</div>
+                    <div class="text-white">Quality content is the foundation of a successful digital strategy. We craft
+                        customized, high-impact content tailored to each platform, ensuring your message resonates with
+                        your audience and drives action.
+                        <ul class="pl-6 list-disc">
+                            <li>Video production for TikTok, Instagram Reels, and YouTube</li>
+                            <li>Carousel graphics, infographics, and branded visuals</li>
+                            <li>SEO-optimized blog writing for long-form content strategies</li>
+                            <li>Professional copywriting for social media, ads, and web content</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bg-black rounded-lg p-5 space-y-4" data-aos="fade-right">
+                    <img src="accets/images/Layer_1 (5).png" alt="">
+                    <div class="text-2xl font-semibold text-primary">Search Engine Optimization (SEO)</div>
+                    <div class="text-white">Ranking higher in search engines is essential for long-term digital success.
+                        We implement proven SEO strategies that drive organic traffic and position your brand as an
+                        industry leader.
+                        <ul class="pl-6 list-disc">
+                            <li>In-depth keyword research and strategy development</li>
+                            <li>On-page and technical SEO improvements</li>
+                            <li>Link-building campaigns for domain authority growth</li>
+                            <li>SEO audits and performance optimization</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bg-black rounded-lg p-5 space-y-4" data-aos="fade-left">
+                    <img src="accets/images/Layer_1 (6).png" alt="">
+                    <div class="text-2xl font-semibold text-primary">Videography &
+                        Photography </div>
+                    <div class="text-white">We create, execute, and refine high-converting ad campaigns across multiple
+                        platforms. We base every campaign on data, ensuring you maximize your ad spend for the highest
+                        return on investment.
+                        <ul class="pl-6 list-disc">
+                            <li>Meta (Facebook & Instagram), TikTok, and Google Ads campaign management</li>
+                            <li>Custom audience targeting and retargeting strategies</li>
+                            <li>A/B testing for creative and ad copy optimization</li>
+                            <li>Performance tracking and ROI analysis</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section class="bg-[url(accets/images/bg-7098phj.jpg)] bg-cover bg-center bg-no-repeat">
+        <div class="bg-[#ffffffb7] bg-opacity-90 h-full lg:py-20 py-10">
+            <div class="container mx-auto text-center px-3 space-y-3 ">
+                <div class="grid grid-flow-col flex-nowrap items-center overflow-x-auto">
+                    <div class="box relative border bg-white border-primary rounded-full w-[430px] h-[430px] flex gap-2 flex-col p-16 items-center justify-center hover:z-10 transition duration-150 ease-out"
+                        data-aos="zoom-in">
+                        <img class="mix-blend-difference mr-auto block" src="accets/images/Layer_1 (2).png" alt="">
+                        <div class="text-primary font-medium text-xl text-start">Step 1: Client Intake & Strategy
+                            Development</div>
+                        <div class="text-start text-sm">We begin with a comprehensive intake process, gathering details
+                            about
+                            your brand, target audience, and marketing objectives. This information is the foundation
+                            for a strategic plan tailored to your needs.</div>
+                    </div>
+                    <div class="box relative border bg-white border-primary rounded-full w-[430px] h-[430px] xl:ml-[-270px] lg:ml-[-320px] flex gap-2 flex-col p-16 items-center justify-center hover:z-10 transition duration-150 ease-out"
+                        data-aos="zoom-in">
+                        <img class="mix-blend-difference mr-auto block" src="accets/images/Layer_1-1.png" alt="">
+                        <div class="text-primary font-medium text-xl text-start">Step 2: Discovery Call & Service
+                            Alignment</div>
+                        <div class="text-start">We conduct a one-on-one discovery session to discuss your goals in
+                            detail, refine strategies, and ensure that our approach aligns with your business
+                            objectives.
+                        </div>
+                    </div>
+                    <div class="box relative border bg-white border-primary rounded-full w-[430px] h-[430px] xl:ml-[-270px] lg:ml-[-320px] flex gap-2 flex-col p-16 items-center justify-center hover:z-10 transition duration-150 ease-out"
+                        data-aos="zoom-in">
+                        <img class="mix-blend-difference mr-auto block" src="accets/images/Layer_1-2.png" alt="">
+                        <div class="text-primary font-medium text-xl text-start">Step 3: Onboarding & Welcome Packet
+                        </div>
+                        <div class="text-start">After finalizing the strategy, we provide a welcome packet outlining:
+                            Service timelines, deliverables, and expectations
+                            The content approval and feedback process
+                            Communication methods and reporting structure</div>
+                    </div>
+                    <div class="box relative border bg-white border-primary rounded-full w-[430px] h-[430px] xl:ml-[-270px] lg:ml-[-320px] flex gap-2 flex-col p-16 items-center justify-center hover:z-10 transition duration-150 ease-out"
+                        data-aos="zoom-in">
+                        <img class="mix-blend-difference mr-auto block" src="accets/images/Layer_1-3.png" alt="">
+                        <div class="text-primary font-medium text-xl text-start">Step 4: Market Research & Strategy
+                            Implementation</div>
+                        <div class="text-start">Our team conducts detailed industry research, analyzes competitors, and
+                            identifies content trends to create a data-driven content and marketing plan.</div>
+                    </div>
+                    <div class="box relative border bg-white border-primary rounded-full w-[430px] h-[430px] xl:ml-[-270px] lg:ml-[-320px] flex gap-2 flex-col p-16 items-center justify-center hover:z-10 transition duration-150 ease-out"
+                        data-aos="zoom-in">
+                        <img class="mix-blend-difference mr-auto block" src="accets/images/Layer_1-4.png" alt="">
+                        <div class="text-primary font-medium text-xl text-start">Step 5: Content Execution &
+                            Optimization</div>
+                        <div class="text-start">We execute and manage your content strategy precisely, ensuring every
+                            piece aligns with your business goals. We continuously monitor performance and make
+                            real-time adjustments to maximize results.</div>
+                    </div>
+                    <div class="box relative border bg-white border-primary rounded-full w-[430px] h-[430px] xl:ml-[-270px] lg:ml-[-320px] flex gap-2 flex-col p-16 items-center justify-center hover:z-10 transition duration-150 ease-out"
+                        data-aos="zoom-in">
+                        <img class="mix-blend-difference mr-auto block" src="accets/images/Layer_1.png" alt="">
+                        <div class="text-primary font-medium text-xl text-start">Step 6: Performance Review & Growth
+                            Strategy</div>
+                        <div class="text-start">We analyze key performance metrics, provide actionable insights, and
+                            optimize strategies to
+                            ensure continued growth and long-term success.</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-10 overflow-hidden">
+        <div class="container mx-auto px-6 lg:max-w-[1200px] space-y-3">
+            <div class="text-xl font-semibold text-center text-primary" data-aos="fade-down">FAQ</div>
+            <div class="text-center text-4xl font-bold" data-aos="fade-down">Frequently Asked Questions</span>
+            </div>
+
+            <div class="border rounded-xl mx-auto block lg:w-[900px]" data-aos="fade-up">
+                <div class="my-8">
+                    <div class="accordian-head flex items-center justify-between px-4 cursor-pointer">
+                        <div class="text-xl font-semibold align-middle mr-3"><span
+                                class="text-2xl text-primary mr-5">01</span>How long does onboarding take?</div>
+                        <i
+                            class="ri-add-line bg-black text-white rounded-full px-2 py-1 text-xl rotate-45 transition duration-500 ease-in-out"></i>
+                    </div>
+                    <div class="accordian-body acc-collapse text-slate-500 px-10" style="height: 48px;">Onboarding
+                        typically takes 7 to 14 days, depending on the complexity of your project.
+                    </div>
+                </div>
+                <div class="my-8">
+                    <div class="accordian-head flex items-center justify-between border-t px-4 pt-6 cursor-pointer">
+                        <div class="text-xl font-semibold align-middle mr-3"><span
+                                class="text-2xl text-primary mr-5">02</span>What tools do we use for the client portal?
+                        </div>
+                        <i
+                            class="ri-add-line bg-slate-100 text-black rounded-full px-2 py-1 text-xl transition duration-500 ease-in-out"></i>
+                    </div>
+                    <div class="accordian-body acc-collapse text-slate-500 px-10">We use Notion and Asana for project
+                        management and content approvals, Google Drive for file sharing, and Slack for
+                        direct communication.
+                    </div>
+                </div>
+                <div class="my-8">
+                    <div class="accordian-head flex items-center justify-between border-t px-4 pt-6 cursor-pointer">
+                        <div class="text-xl font-semibold align-middle mr-3"><span
+                                class="text-2xl text-primary mr-5">03</span>WhWhat kind of reports or updates do clients
+                            receive?
+                        </div>
+                        <i
+                            class="ri-add-line bg-slate-100 text-black rounded-full px-2 py-1 text-xl transition duration-500 ease-in-out"></i>
+                    </div>
+                    <div class="accordian-body acc-collapse text-slate-500 px-10">
+                        <div>We provide monthly reports covering the following:</div>
+                        <ul class="list-disc pl-6">
+                            <li>Engagement metrics for social media content (reach, interactions, audience growth)</li>
+                            <li>Website traffic and SEO performance analytics</li>
+                            <li>Ad campaign results, including conversion rates and ROI tracking</li>
+                            <li>Insights into content performance and strategy recommendations</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="my-8">
+                    <div class="accordian-head flex items-center justify-between border-t px-4 pt-6 cursor-pointer">
+                        <div class="text-xl font-semibold align-middle mr-3"><span
+                                class="text-2xl text-primary mr-5">04</span>How do you ensure content aligns with my
+                            brand’s voice?
+                        </div>
+                        <i
+                            class="ri-add-line bg-slate-100 text-black rounded-full px-2 py-1 text-xl transition duration-500 ease-in-out"></i>
+                    </div>
+                    <div class="accordian-body acc-collapse text-slate-500 px-10">
+                        We conduct an in-depth brand analysis during onboarding, defining tone, messaging style, and key
+                        brand values. Every
+                        piece of content undergoes a review process to ensure consistency.
+                    </div>
+                </div>
+                <div class="my-8">
+                    <div class="accordian-head flex items-center justify-between border-t px-4 pt-6 cursor-pointer">
+                        <div class="text-xl font-semibold align-middle mr-3"><span
+                                class="text-2xl text-primary mr-5">05</span>Can I request additional services or
+                            modifications to my package?
+                        </div>
+                        <i
+                            class="ri-add-line bg-slate-100 text-black rounded-full px-2 py-1 text-xl transition duration-500 ease-in-out"></i>
+                    </div>
+                    <div class="accordian-body acc-collapse text-slate-500 px-10">
+                        We offer customized service enhancements, including additional content creation, ad management,
+                        and influencer
+                        marketing. With a 14-day notice, clients can upgrade their package at any time.
+                    </div>
+                </div>
+                <div class="my-8">
+                    <div class="accordian-head flex items-center justify-between border-t px-4 pt-6 cursor-pointer">
+                        <div class="text-xl font-semibold align-middle mr-3"><span
+                                class="text-2xl text-primary mr-5">06</span>How do you track the success of marketing
+                            campaigns?
+                        </div>
+                        <i
+                            class="ri-add-line bg-slate-100 text-black rounded-full px-2 py-1 text-xl transition duration-500 ease-in-out"></i>
+                    </div>
+                    <div class="accordian-body acc-collapse text-slate-500 px-10">
+                        We measure success using data analytics, audience insights, and performance-tracking tools. We
+                        monitor key performance
+                        indicators (KPIs) to ensure continuous optimization and long-term growth.
+                    </div>
+                </div>
+                <div class="my-8">
+                    <div class="accordian-head flex items-center justify-between border-t px-4 pt-6 cursor-pointer">
+                        <div class="text-xl font-semibold align-middle mr-3"><span
+                                class="text-2xl text-primary mr-5">07</span>Do you offer full-service social media
+                            management or just content creation?
+                        </div>
+                        <i
+                            class="ri-add-line bg-slate-100 text-black rounded-full px-2 py-1 text-xl transition duration-500 ease-in-out"></i>
+                    </div>
+                    <div class="accordian-body acc-collapse text-slate-500 px-10">
+                        We offer both. Clients can choose comprehensive social media management (including content
+                        scheduling, engagement, and
+                        reporting) or opt for content creation only if they prefer to handle posting in-house.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-[url(accets/images/bg-oakbf80.jpg)] bg-cover bg-center bg-no-repeat overflow-hidden">
+        <div class="bg-[#000000d0] bg-opacity-90 h-full lg:py-20 py-10">
+            <div class="container mx-auto px-6 lg:max-w-[1200px] space-y-3">
+                <div class="grid lg:grid-cols-3 gap-7">
+                    <div class="lg:col-span-1" data-aos="fade-right">
+                        <img class="block mx-auto h-[500px] object-contain" src="accets/images/img-uopiu98.png" alt="">
+                    </div>
+
+                    <div class="lg:col-span-2 space-y-4" data-aos="fade-left">
+                        <div class="text-4xl font-bold text-white">Why Choose <span class="text-primary"> Aurum
+                                House</span> Marketing Agency?</div>
+                        <p class="text-white text-xl">Our team brings a combination of expertise, strategic insight, and
+                            creative execution to
+                            every project. We understand the nuances of digital marketing and tailor our approach to
+                            maximize impact and deliver measurable results.</p>
+                        <ul class="list-disc space-y-4 pl-6 text-white">
+                            <li class="text-xl">We take a data-driven approach – Every strategy is backed by analytics,
+                                ensuring we focus on what works.</li>
+                            <li class="text-xl">We provide complete transparency – Clients can access reports, content
+                                drafts, and real-time progress tracking.</li>
+                            <li class="text-xl">We customize every strategy – We customize each campaign to fit your
+                                business needs, avoiding generic templates.</li>
+                        </ul>
+                        <p class="text-white text-xl">We stay ahead of trends – The digital landscape constantly
+                            evolves, and we ensure your brand
+                            remains competitive.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="py-10 overflow-hidden">
+        <div class="container mx-auto text-center px-3 lg:max-w-[1000px] space-y-3">
+            <div class="md:text-6xl text-3xl font-bold" data-aos="fade-right"><span class="bg-primary">Let’s</span>
+                Build Your Digital <br> Success
+                Together</div>
+            <p class="" data-aos="fade-left">Partner with Aurum House Marketing Agency to develop a strategic,
+                results-driven marketing plan that strengthens your brand’s presence and accelerates business growth.
+                Contact us today to discuss how we can tailor a marketing strategy that meets your goals.
+            </p>
+            <p data-aos="fade-right">📧 Email: info@aurumhouse.com</p>
+            <p data-aos="fade-left">Our team is ready to create a customized, high-performance marketing strategy that
+                delivers results.
+                Let’s get started.</p>
+
+            <div class="flex justify-center py-16">
+                <img class="relative -top-10 rotate-180" src="accets/images/Vector Element.png" alt="">
+                <button
+                    class="modal-tog bg-primary hover:bg-black duration-300 text-white px-7 py-2 rounded-md text-nowrap"
+                    data-aos="zoom-in"> Get
+                    Started</button>
+                <img class="relative top-10" src="accets/images/Vector Element.png" alt="">
+            </div>
+        </div>
+    </section>
+
+
+    <div class="modal fixed top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 hidden z-20">
+        <div class="lg:w-[400px] md:w-[350px]">
+            <div class="bg-white p-6 rounded-xl space-y-3 border border-slate-500">
+                <div class="text-3xl capitalize font-semibold text-center">Get In Touch With Us</div>
+
+                <form class="space-y-4" action="#">
+                    <input class="border border-slate-300 w-full rounded-md p-2 outline-none" placeholder="Your Name"
+                        type="text">
+                    <input class="border border-slate-300 w-full rounded-md p-2 outline-none"
+                        placeholder="Your Phone Number" type="text">
+                    <input class="border border-slate-300 w-full rounded-md p-2 outline-none"
+                        placeholder="Email Address" type="text">
+                    <select class="border border-black text-neutral-400 w-full rounded-md p-2 outline-none" name=""
+                        id="">
+                        <option class="" value="">Which service are you interested in?</option>
+                    </select>
+                    <input class="border border-slate-300 w-full rounded-md p-2 outline-none" placeholder="Message"
+                        type="text">
+                    <button
+                        class="bg-black text-white hover:bg-primary duration-300 uppercase rounded-md w-full p-2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-black text-white overflow-hidden">
+        <div class="container mx-auto px-6 lg:max-w-[1200px] py-12" data-aos="fade-up">
+            <div class="grid max-sm:text-center lg:grid-cols-4 md:gap-16 sm:gap-3 sm:grid-cols-3 grid-cols-1 gap-12">
+                <div class="lg:col-span-1 md:col-span-3">
+                    <a href="index.html">
+                        <img class="block mx-auto lg:h-[100px] h-[150px] lg:w-[100px] w-[150px] object-cover"
+                            src="accets/images/Logo.png" alt="">
+                    </a>
+                    <div class="my-4 text-sm">We don’t just market brands we build them. Whether you're a startup making
+                        your
+                        debut or an established business ready for the next level, we craft data driven, results focused
+                        marketing strategies that set you apart. </div>
+                </div>
+                <div>
+                    <div class="w-fit mx-auto">
+                        <ul class="space-y-2">
+                            <li><a class="text-xl font-semibold">Pages</a></li>
+                            <li><a class="text-sm" href="index.html">Home</a></li>
+                            <li><a class="text-sm" href="What-We-Do.html">What We Do</a></li>
+                            <li><a class="text-sm" href="How-It-Works.html">How It Works</a></li>
+                            <li><a class="text-sm" href="Pricing-and-Packages.html">Pricing and Packages</a></li>
+                            <li><a class="text-sm" href="Testimonials.html">Testimonials</a></li>
+                            <li><a class="text-sm" href="Blog.html">Blogs</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <div class="w-fit mx-auto">
+                        <ul class="space-y-2">
+                            <li><a class="text-xl font-semibold">Services</a></li>
+                            <li><a class="text-sm" href="Social-Media-Management.html">Social Media Management</a>
+                            </li>
+                            <li><a class="text-sm" href="Search-Engine-Optimization.html">Search Engine
+                                    Optimization</a>
+                            </li>
+                            <li><a class="text-sm" href="Email-Marketing-Services.html">Email Marketing Services</a>
+                            </li>
+                            <li><a class="text-sm" href="Videography-Photography.html">Videography/Photography</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <div class="w-fit mx-auto">
+                        <ul class="space-y-2">
+                            <li><a class="text-xl font-semibold">Newsletter</a></li>
+                            <li
+                                class="bg-white border overflow-hidden flex justify-between rounded-full md:w-auto w-[300px] mx-auto">
+                                <input class="outline-none text-neutral-600 text-sm pl-3 w-full" type="text"
+                                    placeholder="Enter your email here">
+                                <button
+                                    class="bg-neutral-800 hover:bg-primary hover:text-white duration-300 p-2 py-3 text-xs border-0">SUBSCRIBE</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-black">
+            <div class="container mx-auto px-6 lg:max-w-[1200px] md:border-t border-slate-700 py-3">
+                <div class="grid items-center max-sm:text-center md:grid-flow-col md:gap-5 gap-12">
+                    <div>
+                        <div class="font-semibold">Copyright by</div>
+                        <div>Aurum House Marketing Agency</div>
+                    </div>
+                    <div>
+                        <div class="font-semibold">Contact Us</div>
+                        <div>info@aurumhouse.com</div>
+                    </div>
+                    <div class="space-x-4 text-center">
+                        <i
+                            class="text-xl p-1 bg-white hover:bg-primary hover:text-white duration-300 cursor-pointer text-black rounded-md ri-facebook-line"></i>
+                        <i
+                            class="text-xl p-1 bg-white hover:bg-primary hover:text-white duration-300 cursor-pointer text-black rounded-md ri-instagram-line"></i>
+                        <i
+                            class="text-xl p-1 bg-white hover:bg-primary hover:text-white duration-300 cursor-pointer text-black rounded-md ri-linkedin-box-line"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            duration: 1000
+        });
+    </script>
+</body>
+
+</html>

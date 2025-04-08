@@ -1,0 +1,524 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<style>
+    .acc-collapse {
+        height: 0px;
+        overflow-y: hidden;
+        transition: 0.3s ease-in;
+    }
+</style>
+
+<body class="min-w-[360px]">
+    <div class="mask hidden h-screen w-screen bg-black opacity-60 z-10 fixed"></div>
+    <!-- navbar -->
+    <nav class="bg-black py-2">
+        <div class="container mx-auto px-6 lg:max-w-[1200px]">
+            <div class="grid items-center justify-between grid-flow-col gap-5">
+                <div class="space-y-2">
+                    <a href="index.html" class="text-2xl font-semibold"><img class="w-[100px]"
+                            src="accets/images/Logo.png" alt=""></a>
+                </div>
+
+                <div
+                    class="responsive-nav lg:relative fixed duration-300 max-lg:top-0 max-lg:-left-96 z-20 max-lg:h-screen max-lg:p-8 lg:bg-black bg-white">
+                    <ul
+                        class="flex lg:justify-between max-lg:flex-col xl:gap-8 lg:gap-4 lg:text-white text-black gap-6">
+                        <a class="text-nowrap" href="index.html">
+                            <li>Home</li>
+                        </a>
+                        <a class="text-nowrap" href="What-We-Do.html">
+                            <li>What We Do</li>
+                        </a>
+                        <a class="text-nowrap" href="How-It-Works.html">
+                            <li>How It Works</li>
+                        </a>
+                        <div class="relative max-lg:hidden group">
+                            <a class="text-nowrap">
+                                <li>Services <i class="ri-arrow-down-s-line"></i></li>
+                            </a>
+                            <div class="absolute z-10 hidden group-hover:block bg-white text-black border rounded">
+                                <ul class="">
+                                    <a class="text-nowrap" href="Social-Media-Management.html">
+                                        <li class="border-t p-3 text-sm hover:bg-primary hover:text-white duration-300">
+                                            Social Media Management</li>
+                                    </a>
+                                    <a class="text-nowrap" href="Search-Engine-Optimization.html">
+                                        <li class="border-t p-3 text-sm hover:bg-primary hover:text-white duration-300">
+                                            Search Engine Optimization</li>
+                                    </a>
+                                    <a class="text-nowrap" href="Email-Marketing-Services.html">
+                                        <li class="border-t p-3 text-sm hover:bg-primary hover:text-white duration-300">
+                                            Email Marketing Services</li>
+                                    </a>
+                                    <a class="text-nowrap" href="Videography-Photography.html">
+                                        <li class="border-t p-3 text-sm hover:bg-primary hover:text-white duration-300">
+                                            Videography/Photography</li>
+                                    </a>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="lg:hidden">
+                            <div class="accordian-head flex items-center justify-between pb-3 cursor-pointer">
+                                <div class="font-semibold align-middle">Our Services </div>
+                                <i
+                                    class="ri-add-line text-black rounded-full px-2 py-1 text-sx transition border duration-500 ease-in-out bg-slate-100"></i>
+                            </div>
+                            <div class="accordian-body acc-collapse">
+                                <ul class="">
+                                    <a class="text-nowrap" href="Social-Media-Management.html">
+                                        <li class="border-slate-200 px-3 py-2 text-sm">Social Media Management</li>
+                                    </a>
+                                    <a class="text-nowrap" href="Search-Engine-Optimization.html">
+                                        <li class="border-slate-200 px-3 py-2 text-sm">Search Engine Optimization
+                                        </li>
+                                    </a>
+                                    <a class="text-nowrap" href="Email-Marketing-Services.html">
+                                        <li class="border-slate-200 px-3 py-2 text-sm">Email Marketing Services</li>
+                                    </a>
+                                    <a class="text-nowrap" href="Videography-Photography.html">
+                                        <li class="border-slate-200 px-3 py-2 text-sm">Videography/Photography</li>
+                                    </a>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <a class="text-nowrap" href="Pricing-and-Packages.html">
+                            <li>Pricing and Packages</li>
+                        </a>
+                        <!-- <a class="text-nowrap" href="Testimonials.html">
+                            <li>Testimonials</li>
+                        </a> -->
+                        <a class="text-nowrap" href="Blog.html">
+                            <li>Blogs</li>
+                        </a>
+                        <a class="lg:hidden text-nowrap" href="tel:(786)-416-6767">
+                            <li><i class="ri-phone-line text-primary text-2xl"></i> (786)-416-6767</li>
+                        </a>
+                        <a class="lg:hidden text-nowrap" href="mailto:(786)-416-6767">
+                            <li><i class="ri-mail-line text-primary text-2xl"></i> info@thehomedefenders.com</li>
+                        </a>
+                    </ul>
+                </div>
+
+                <div>
+                    <a href="Contact-Us.html">
+                        <button
+                            class="lg:block hidden bg-white hover:bg-primary hover:text-white duration-300 px-4 py-2 rounded-3xl text-nowrap">
+                            GET IN
+                            TOUCH</button>
+                    </a>
+                    <a class="lg:hidden" href="#">
+                        <li><i class="ri-menu-3-line text-white text-2xl rounded-full nav-Toggle"></i></li>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- navbar end -->
+
+
+    <!-- hero section -->
+    <section class="py-10 overflow-hidden">
+        <div class="container mx-auto px-6 lg:max-w-[1200px]">
+            <div class="grid items-center justify-around md:grid-flow-col gap-10">
+                <div class="space-y-5" data-aos="fade-right">
+                    <h1 class="xl:text-5xl text-4xl font-bold"><span class="text-primary">Search
+                            Engine</span><span
+                            class="relative after:content-lineVactor after:absolute after:right-0 after:-bottom-4">
+                            Optimization</span></h1>
+                    <div class="text-xl font-semibold">SEO Services – Strategic Optimization for Maximum Visibility
+                    </div>
+                    <div class="font-semibold">At Aurum House Marketing Agency, we develop strategic SEO
+                        solutions that put your business in front of the right
+                        audience at the right time. With 75% of users never scrolling past the first page of search
+                        results, securing a top
+                        position isn’t just beneficial—it’s essential for visibility and growth.
+                        <br>
+                        <br>
+                        SEO is more than just ranking higher; it’s about building long-term digital authority that
+                        drives qualified traffic and
+                        tangible business outcomes. We analyze data, understand user intent, and refine every element of
+                        your online presence to
+                        ensure your website doesn’t just attract visitors but converts them into loyal customers. Our
+                        approach isn’t about quick
+                        fixes— but sustainable, measurable results that align with your business goals.
+                    </div>
+                </div>
+                <div class="lg:block hidden" data-aos="fade-left">
+                    <img src="accets/images/Symbol.png" alt="">
+                </div>
+            </div>
+    </section>
+    <!-- hero section end -->
+
+
+    <section class="py-10 overflow-hidden">
+        <div class="container mx-auto px-6 lg:max-w-[1200px] space-y-3">
+            <div class="text-center md:text-4xl text-3xl font-bold" data-aos="fade-down">Comprehensive <span
+                    class="text-primary">SEO</span> Services</div>
+            <div class="text-center text-xl font-semibold">We provide a full spectrum of SEO services that cover every
+                aspect of search engine optimization:</div>
+            <div class="grid lg:grid-cols-4 md:grid-cols-2 gap-4">
+                <div class="shadow-2xl bg-white rounded-lg p-5 space-y-4" data-aos="fade-up">
+                    <img src="accets/images/Layer_1 (7).png" alt="">
+                    <div class="text-xl font-semibold">On-Page SEO</div>
+                    <ul class="pl-6 list-disc">
+                        <li>Keyword research and strategic content optimization</li>
+                        <li>Metadata, headers, and internal linking structure improvements</li>
+                        <li>User experience (UX) and engagement optimization</li>
+                    </ul>
+                </div>
+                <div class="shadow-2xl bg-white rounded-lg p-5 space-y-4" data-aos="fade-up">
+                    <img src="accets/images/Vector (3).png" alt="">
+                    <div class="text-xl font-semibold">Off-Page SEO</div>
+                    <ul class="pl-6 list-disc">
+                        <li>High-quality link-building strategies</li>
+                        <li>Digital PR and authority development</li>
+                        <li>Brand mentions and social signals for credibility enhancement</li>
+                    </ul>
+                </div>
+                <div class="shadow-2xl bg-white rounded-lg p-5 space-y-4" data-aos="fade-up">
+                    <img src="accets/images/Layer_1 (8).png" alt="">
+                    <div class="text-xl font-semibold">Technical SEO</div>
+                    <ul class="pl-6 list-disc">
+                        <li>Website speed optimization and mobile responsiveness</li>
+                        <li>Indexing and crawlability improvements</li>
+                        <li>Structured data and schema markup implementation</li>
+                    </ul>
+                </div>
+                <div class="shadow-2xl bg-white rounded-lg p-5 space-y-4" data-aos="fade-up">
+                    <img src="accets/images/Layer_1 (9).png" alt="">
+                    <div class="text-xl font-semibold">Local SEO</div>
+                    <ul class="pl-6 list-disc">
+                        <li>Google Business Profile optimization</li>
+                        <li>Citation management and local link-building</li>
+                        <li>Location-based keyword strategies</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="bg-[url(accets/images/bg-7098phj.jpg)] bg-cover bg-center bg-no-repeat overflow-hidden">
+        <div class="bg-[#000000d0] text-white bg-opacity-90 h-full lg:py-20 py-10">
+            <div class="container mx-auto px-6 lg:max-w-[1200px] space-y-3">
+                <div class="md:col-span-2 space-y-4" data-aos="fade-left">
+
+                    <div class="text-xl font-semibold">Why Choose Aurum House Marketing Agency?</div>
+                    <p>Choosing the right SEO partner is critical to long-term success. Our team builds our approach on
+                        expertise, precision,
+                        and results-driven strategies.</p>
+                    <ul class="pl-6 list-disc">
+                        <li>Tailored SEO Strategies – Every business is unique, and we develop customized strategies
+                            based on your industry, competition, and goals.</li>
+                        <li>Data-Driven Decision Making – Our optimizations are backed by in-depth analytics, ensuring
+                            every action is measurable and impactful.</li>
+                        <li>Ethical, White-Hat SEO Practices – We adhere to Google’s guidelines, ensuring sustainable
+                            and penalty-free growth.</li>
+                        <li>Industry Expertise – Our team stays ahead of evolving search engine algorithms and market
+                            trends to keep your business competitive.</li>
+                    </ul>
+                    <p>Transparent Reporting & Insights – We provide regular reports, detailed analytics, and actionable
+                        insights to track
+                        performance and ROI.</p>
+
+                    <div class="text-xl font-semibold">How Do We Measure SEO Success?</div>
+                    <p>SEO success depends on multiple key performance indicators (KPIs), including:</p>
+                    <ul class="pl-6 list-disc">
+                        <li>Organic Traffic Growth – Analyzing how many visitors find your site through search engines.
+                        </li>
+                        <li>Keyword Rankings – Monitoring position improvements for targeted search terms.</li>
+                        <li>User Engagement Metrics – Tracking bounce rates, session duration, and conversion rates.
+                        </li>
+                        <li>Backlink Profile Strength – Evaluating the quality and authority of external links pointing
+                            to your site.</li>
+                        <li>Lead Generation & Sales Impact – Assessing how SEO efforts translate into business growth.
+                        </li>
+                    </ul>
+
+                    <div class="text-xl font-semibold">Industries We Serve</div>
+                    <p>Our SEO strategies are adaptable across multiple industries, benefiting businesses such as:</p>
+                    <ul class="pl-6 list-disc">
+                        <li>E-Commerce & Retail – Increase product visibility and online sales.</li>
+                        <li>Professional Services – Generate high-quality leads for law firms, agencies, consultants,
+                            and more.</li>
+                        <li>Healthcare & Wellness – Optimize for patient acquisition and industry authority.</li>
+                        <li>Real Estate & Construction – Enhance local visibility and attract serious buyers.</li>
+                    </ul>
+
+                    <div class="text-xl font-semibold">One-Time SEO vs. Ongoing SEO Optimization</div>
+                    <p>SEO is not a one-time fix but a long-term investment. While a single SEO audit and optimization
+                        can provide initial
+                        improvements, ongoing SEO management is essential for maintaining rankings, adapting to
+                        algorithm updates, and
+                        outperforming competitors.</p>
+                    <div class="text-xl font-semibold">Our services include:</div>
+                    <ul class="pl-6 list-disc">
+                        <li>One-Time SEO Audit & Optimization – Ideal for businesses looking for a comprehensive
+                            analysis and a strong foundational setup.</li>
+                        <li>Monthly SEO Management – Continuous optimization, content creation, and strategic
+                            adjustments to ensure long-term growth.</li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="py-10 overflow-hidden">
+        <div class="container mx-auto px-6 lg:max-w-[1200px] space-y-3">
+            <div class="text-xl font-semibold text-center text-primary" data-aos="fade-down">FAQ</div>
+            <div class="text-center text-4xl font-bold" data-aos="fade-down">Frequently Asked Questions</span>
+            </div>
+
+            <div class="border rounded-xl mx-auto block lg:w-[900px]" data-aos="fade-up">
+                <div class="my-8">
+                    <div class="accordian-head flex items-center justify-between px-4 cursor-pointer">
+                        <div class="text-xl font-semibold align-middle mr-3"><span
+                                class="text-2xl text-primary mr-5">01</span>1. How long does SEO take to show results?
+                        </div>
+                        <i
+                            class="ri-add-line bg-black text-white rounded-full px-2 py-1 text-xl rotate-45 transition duration-500 ease-in-out"></i>
+                    </div>
+                    <div class="accordian-body acc-collapse text-slate-500 px-10" style="height: 48px;">SEO delivers
+                        long-term results. Businesses may see some improvements within a few weeks, but achieving
+                        significant
+                        ranking increases typically takes 3 to 6 months, depending on competition and industry factors.
+                    </div>
+                </div>
+                <div class="my-8">
+                    <div class="accordian-head flex items-center justify-between border-t px-4 pt-6 cursor-pointer">
+                        <div class="text-xl font-semibold align-middle mr-3"><span
+                                class="text-2xl text-primary mr-5">02</span>2. Can SEO guarantee the #1 spot on Google?
+                        </div>
+                        <i
+                            class="ri-add-line bg-slate-100 text-black rounded-full px-2 py-1 text-xl transition duration-500 ease-in-out"></i>
+                    </div>
+                    <div class="accordian-body acc-collapse text-slate-500 px-10">No legitimate agency can guarantee the
+                        #1 position. However, our proven strategies maximize your chances of ranking at
+                        the top through ethical, data-backed optimization techniques.
+                    </div>
+                </div>
+                <div class="my-8">
+                    <div class="accordian-head flex items-center justify-between border-t px-4 pt-6 cursor-pointer">
+                        <div class="text-xl font-semibold align-middle mr-3"><span
+                                class="text-2xl text-primary mr-5">03</span>3. What makes Aurum House different from
+                            other SEO agencies?
+                        </div>
+                        <i
+                            class="ri-add-line bg-slate-100 text-black rounded-full px-2 py-1 text-xl transition duration-500 ease-in-out"></i>
+                    </div>
+                    <div class="accordian-body acc-collapse text-slate-500 px-10">
+                        <div>Unlike agencies that apply generic tactics, we develop custom strategies based on in-depth
+                            market research, competitor
+                            analysis, and your unique business goals. Our commitment to transparency and measurable
+                            results sets us apart.
+                        </div>
+                    </div>
+                </div>
+                <div class="my-8">
+                    <div class="accordian-head flex items-center justify-between border-t px-4 pt-6 cursor-pointer">
+                        <div class="text-xl font-semibold align-middle mr-3"><span
+                                class="text-2xl text-primary mr-5">04</span>4. Do you offer SEO for international
+                            businesses?
+                        </div>
+                        <i
+                            class="ri-add-line bg-slate-100 text-black rounded-full px-2 py-1 text-xl transition duration-500 ease-in-out"></i>
+                    </div>
+                    <div class="accordian-body acc-collapse text-slate-500 px-10">
+                        <div>We provide international, national, and local SEO services, adapting strategies to
+                            different markets and audiences.
+                        </div>
+                    </div>
+                </div>
+                <div class="my-8">
+                    <div class="accordian-head flex items-center justify-between border-t px-4 pt-6 cursor-pointer">
+                        <div class="text-xl font-semibold align-middle mr-3"><span
+                                class="text-2xl text-primary mr-5">05</span>5. How do we get started?
+                        </div>
+                        <i
+                            class="ri-add-line bg-slate-100 text-black rounded-full px-2 py-1 text-xl transition duration-500 ease-in-out"></i>
+                    </div>
+                    <div class="accordian-body acc-collapse text-slate-500 px-10">
+                        <div>We begin with a comprehensive SEO audit and strategy session. Contact us today to schedule
+                            a consultation and take the
+                            first step toward digital growth.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="bg-[url(accets/images/hero-bg.jpg)] bg-cover bg-center bg-no-repeat overflow-hidden">
+        <div class="bg-[#000000d0] bg-opacity-90 h-full lg:py-20 py-10">
+            <div class="container mx-auto px-6 lg:max-w-[1200px] space-y-3">
+                <div class="grid md:grid-cols-2 items-center gap-8">
+                    <div class="space-y-4 text-white" data-aos="fade-right">
+                        <div class="text-4xl font-bold">Take Your Business to the Next Level with <span
+                                class="text-primary"> Expert SEO</span></div>
+                        <div class="">Achieving higher search rankings and sustained online visibility requires a
+                            strategic, expert-led approach. At Aurum
+                            House Marketing Agency, we combine technical expertise, content excellence, and data-driven
+                            insights to help businesses
+                            dominate search results and drive meaningful growth.
+                        </div>
+                        <div class="font-semibold text-xl">📩 Contact us today for a consultation and a free SEO audit.
+                        </div>
+                    </div>
+                    <div class="" data-aos="fade-left">
+                        <img src="accets/images/img-rweoi.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="overflow-hidden py-10">
+        <div class="container mx-auto px-6 lg:max-w-[1200px] border border-slate-500 p-5 rounded-xl space-y-3">
+            <div class="grid md:grid-cols-2 items-center gap-8">
+                <div class="space-y-4 aos-init aos-animate" data-aos="fade-left">
+                    <div class="text-4xl font-bold">How to Get Your Free <span class="text-primary">SEO Audit</span>
+                    </div>
+                    <p class="font-semibold">Curious about how your website ranks on search engines? Get a FREE SEO
+                        Audit to uncover hidden opportunities and improve
+                        your online visibility.</p>
+                    <ul class="list-disc space-y-1 pl-6">
+                        <li>Fill Out the Form – Share your website URL and details so we can analyze your site’s SEO
+                            performance.</li>
+                        <li>Allow 1-2 Business Days – Our team will conduct an in-depth SEO audit, evaluating key areas
+                            such as site speed, keyword
+                            rankings, backlinks, and technical issues.</li>
+                        <li>Receive Your Audit via Email – You'll get a detailed report with insights, strengths, and
+                            actionable recommendations to
+                            improve your search engine ranking.</li>
+                    </ul>
+                </div>
+                <div class="aos-init aos-animate" data-aos="fade-right">
+                    <div class="bg-white p-6 rounded-xl space-y-3 border border-slate-500">
+                        <div class="text-3xl capitalize font-semibold text-center">Get In Touch With Us</div>
+
+                        <form class="space-y-4" action="#">
+                            <input class="border border-slate-300 w-full rounded-md p-2 outline-none"
+                                placeholder="Your Name" type="text">
+                            <input class="border border-slate-300 w-full rounded-md p-2 outline-none"
+                                placeholder="Your Phone Number" type="text">
+                            <input class="border border-slate-300 w-full rounded-md p-2 outline-none"
+                                placeholder="Email Address" type="text">
+                            <input class="border border-slate-300 w-full rounded-md p-2 outline-none"
+                                placeholder="Website URL" type="text">
+                            <button
+                                class="bg-black hover:bg-primary hover:text-white duration-300 text-white uppercase rounded-md w-full p-2">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black text-white overflow-hidden">
+        <div class="container mx-auto px-6 lg:max-w-[1200px] py-12" data-aos="fade-up">
+            <div class="grid max-sm:text-center lg:grid-cols-4 md:gap-16 sm:gap-3 sm:grid-cols-3 grid-cols-1 gap-12">
+                <div class="lg:col-span-1 md:col-span-3">
+                    <a href="index.html">
+                        <img class="block mx-auto lg:h-[100px] h-[150px] lg:w-[100px] w-[150px] object-cover"
+                            src="accets/images/Logo.png" alt="">
+                    </a>
+                    <div class="my-4 text-sm">We don’t just market brands we build them. Whether you're a startup making
+                        your
+                        debut or an established business ready for the next level, we craft data driven, results focused
+                        marketing strategies that set you apart. </div>
+                </div>
+                <div>
+                    <div class="w-fit mx-auto">
+                        <ul class="space-y-2">
+                            <li><a class="text-xl font-semibold">Pages</a></li>
+                            <li><a class="text-sm" href="index.html">Home</a></li>
+                            <li><a class="text-sm" href="What-We-Do.html">What We Do</a></li>
+                            <li><a class="text-sm" href="How-It-Works.html">How It Works</a></li>
+                            <li><a class="text-sm" href="Pricing-and-Packages.html">Pricing and Packages</a></li>
+                            <li><a class="text-sm" href="Testimonials.html">Testimonials</a></li>
+                            <li><a class="text-sm" href="Blog.html">Blogs</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <div class="w-fit mx-auto">
+                        <ul class="space-y-2">
+                            <li><a class="text-xl font-semibold">Services</a></li>
+                            <li><a class="text-sm" href="Social-Media-Management.html">Social Media Management</a>
+                            </li>
+                            <li><a class="text-sm" href="Search-Engine-Optimization.html">Search Engine
+                                    Optimization</a>
+                            </li>
+                            <li><a class="text-sm" href="Email-Marketing-Services.html">Email Marketing Services</a>
+                            </li>
+                            <li><a class="text-sm" href="Videography-Photography.html">Videography/Photography</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <div class="w-fit mx-auto">
+                        <ul class="space-y-2">
+                            <li><a class="text-xl font-semibold">Newsletter</a></li>
+                            <li
+                                class="bg-white border overflow-hidden flex justify-between rounded-full md:w-auto w-[300px] mx-auto">
+                                <input class="outline-none text-neutral-600 text-sm pl-3 w-full" type="text"
+                                    placeholder="Enter your email here">
+                                <button
+                                    class="bg-neutral-800 hover:bg-primary hover:text-white duration-300 p-2 py-3 text-xs border-0">SUBSCRIBE</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-black">
+            <div class="container mx-auto px-6 lg:max-w-[1200px] md:border-t border-slate-700 py-3">
+                <div class="grid items-center max-sm:text-center md:grid-flow-col md:gap-5 gap-12">
+                    <div>
+                        <div class="font-semibold">Copyright by</div>
+                        <div>Aurum House Marketing Agency</div>
+                    </div>
+                    <div>
+                        <div class="font-semibold">Contact Us</div>
+                        <div>info@aurumhouse.com</div>
+                    </div>
+                    <div class="space-x-4 text-center">
+                        <i
+                            class="text-xl p-1 bg-white hover:bg-primary hover:text-white duration-300 cursor-pointer text-black rounded-md ri-facebook-line"></i>
+                        <i
+                            class="text-xl p-1 bg-white hover:bg-primary hover:text-white duration-300 cursor-pointer text-black rounded-md ri-instagram-line"></i>
+                        <i
+                            class="text-xl p-1 bg-white hover:bg-primary hover:text-white duration-300 cursor-pointer text-black rounded-md ri-linkedin-box-line"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            duration: 1000
+        });
+    </script>
+</body>
+
+</html>

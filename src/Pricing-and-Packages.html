@@ -1,0 +1,967 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css" />
+</head>
+<style>
+    .price-plans::-webkit-scrollbar {
+        background-color: #cecece;
+        width: 3px;
+        border-radius: 10px;
+    }
+
+    .price-plans::-webkit-scrollbar-thumb {
+        background-color: #C19A67;
+        border-radius: 10px;
+    }
+
+    .tab-content {
+        display: none;
+    }
+
+    .tab-content.active {
+        display: block;
+    }
+
+    .tab.active {
+        background-color: #C19A67 !important;
+    }
+
+    .tab:hover {
+        background-color: #C19A67 !important;
+        transition: 0.5s;
+    }
+
+    .slick-slide .slick-cloned {
+        width: 294px !important;
+    }
+</style>
+
+<body class="min-w-[360px]">
+    <div class="mask hidden h-screen w-screen bg-black opacity-60 z-10 fixed"></div>
+    <!-- navbar -->
+    <nav class="bg-black py-2">
+        <div class="container mx-auto px-6 lg:max-w-[1200px]">
+            <div class="grid items-center justify-between grid-flow-col gap-5">
+                <div class="space-y-2">
+                    <a href="index.html" class="text-2xl font-semibold"><img class="w-[100px]"
+                            src="accets/images/Logo.png" alt=""></a>
+                </div>
+
+                <div
+                    class="responsive-nav lg:relative fixed duration-300 max-lg:top-0 max-lg:-left-96 z-20 max-lg:h-screen max-lg:p-8 lg:bg-black bg-white">
+                    <ul
+                        class="flex lg:justify-between max-lg:flex-col xl:gap-8 lg:gap-4 lg:text-white text-black gap-6">
+                        <a class="text-nowrap" href="index.html">
+                            <li>Home</li>
+                        </a>
+                        <a class="text-nowrap" href="What-We-Do.html">
+                            <li>What We Do</li>
+                        </a>
+                        <a class="text-nowrap" href="How-It-Works.html">
+                            <li>How It Works</li>
+                        </a>
+                        <div class="relative max-lg:hidden group">
+                            <a class="text-nowrap">
+                                <li>Services <i class="ri-arrow-down-s-line"></i></li>
+                            </a>
+                            <div class="absolute z-10 hidden group-hover:block bg-white text-black border rounded">
+                                <ul class="">
+                                    <a class="text-nowrap" href="Social-Media-Management.html">
+                                        <li class="border-t p-3 text-sm hover:bg-primary hover:text-white duration-300">
+                                            Social Media Management</li>
+                                    </a>
+                                    <a class="text-nowrap" href="Search-Engine-Optimization.html">
+                                        <li class="border-t p-3 text-sm hover:bg-primary hover:text-white duration-300">
+                                            Search Engine Optimization</li>
+                                    </a>
+                                    <a class="text-nowrap" href="Email-Marketing-Services.html">
+                                        <li class="border-t p-3 text-sm hover:bg-primary hover:text-white duration-300">
+                                            Email Marketing Services</li>
+                                    </a>
+                                    <a class="text-nowrap" href="Videography-Photography.html">
+                                        <li class="border-t p-3 text-sm hover:bg-primary hover:text-white duration-300">
+                                            Videography/Photography</li>
+                                    </a>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="lg:hidden">
+                            <div class="accordian-head flex items-center justify-between pb-3 cursor-pointer">
+                                <div class="font-semibold align-middle">Our Services </div>
+                                <i
+                                    class="ri-add-line text-black rounded-full px-2 py-1 text-sx transition border duration-500 ease-in-out bg-slate-100"></i>
+                            </div>
+                            <div class="accordian-body acc-collapse">
+                                <ul class="">
+                                    <a class="text-nowrap" href="Social-Media-Management.html">
+                                        <li class="border-slate-200 px-3 py-2 text-sm">Social Media Management</li>
+                                    </a>
+                                    <a class="text-nowrap" href="Search-Engine-Optimization.html">
+                                        <li class="border-slate-200 px-3 py-2 text-sm">Search Engine Optimization
+                                        </li>
+                                    </a>
+                                    <a class="text-nowrap" href="Email-Marketing-Services.html">
+                                        <li class="border-slate-200 px-3 py-2 text-sm">Email Marketing Services</li>
+                                    </a>
+                                    <a class="text-nowrap" href="Videography-Photography.html">
+                                        <li class="border-slate-200 px-3 py-2 text-sm">Videography/Photography</li>
+                                    </a>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <a class="text-nowrap" href="Pricing-and-Packages.html">
+                            <li>Pricing and Packages</li>
+                        </a>
+                        <!-- <a class="text-nowrap" href="Testimonials.html">
+                            <li>Testimonials</li>
+                        </a> -->
+                        <a class="text-nowrap" href="Blog.html">
+                            <li>Blogs</li>
+                        </a>
+                        <a class="lg:hidden text-nowrap" href="tel:(786)-416-6767">
+                            <li><i class="ri-phone-line text-primary text-2xl"></i> (786)-416-6767</li>
+                        </a>
+                        <a class="lg:hidden text-nowrap" href="mailto:(786)-416-6767">
+                            <li><i class="ri-mail-line text-primary text-2xl"></i> info@thehomedefenders.com</li>
+                        </a>
+                    </ul>
+                </div>
+
+                <div>
+                    <a href="Contact-Us.html">
+                        <button
+                            class="lg:block hidden bg-white hover:bg-primary hover:text-white duration-300 px-4 py-2 rounded-3xl text-nowrap">
+                            GET IN
+                            TOUCH</button>
+                    </a>
+                    <a class="lg:hidden" href="#">
+                        <li><i class="ri-menu-3-line text-white text-2xl rounded-full nav-Toggle"></i></li>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- navbar end -->
+
+    <section class="py-10 overflow-hidden">
+        <div class="container mx-auto px-6 lg:max-w-[1200px] space-y-4">
+            <div class="text-4xl font-bold text-center" data-aos="fade-down">Best <span class="text-primary">Plans
+                </span>For Your Need</div>
+
+            <div class="bg-white">
+                <nav class="tabs grid grid-flow-col overflow-x-auto gap-4 py-7">
+                    <button data-target="panel-1"
+                        class="tab active bg-black text-white rounded-2xl px-3 text-center text-nowrap cursor-pointer py-2">
+                        Website
+                        Development</button>
+                    <button data-target="panel-2"
+                        class="tab bg-black text-white rounded-2xl px-3 text-center text-nowrap cursor-pointer py-2">
+                        Social Media
+                        Management</button>
+                    <button data-target="panel-3"
+                        class="tab bg-black text-white rounded-2xl px-3 text-center text-nowrap cursor-pointer py-2">
+                        Search Engine
+                        Optimization</button>
+                    <button data-target="panel-4"
+                        class="tab bg-black text-white rounded-2xl px-3 text-center text-nowrap cursor-pointer py-2">
+                        Email
+                        Campaigns</button>
+                    <button data-target="panel-5"
+                        class="tab bg-black text-white rounded-2xl px-3 text-center text-nowrap cursor-pointer py-2">
+                        Videography/Photography</button>
+                </nav>
+            </div>
+
+            <div id="panels">
+                <div class="panel-1 tab-content active py-5">
+                    <div class="responsive grid grid-cols-4 gap-x-3">
+                        <div class="px-2">
+                            <div class="border border-primary p-5 rounded-2xl space-y-5">
+                                <button
+                                    class="rounded-full text-white bg-primary px-3 py-2 block mx-auto font-semibold uppercase font-mono tracking-[2px]">Basic</button>
+                                <div class="text-center text-5xl font-bold before:content-['$'] before:text-sm 
+                                                    before:relative before:-top-6">30</div>
+                                <ul class="price-plans text-lg ">
+                                    <li><i class="ri-check-line font-semibold"></i> 03 Web Pages (Informative)</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Complete Designing</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Complete Deployment</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Free Domain Registration</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Cross Browser Compatible</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Cross Browser Compatible</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Cross Browser Compatible</li>
+                                </ul>
+                                <div class="border-t border-slate-300"></div>
+                                <div class="text-center">Give your startup a kick-start with Webbulls Website Startup
+                                </div>
+                                <button
+                                    class="modal-tog rounded-full text-white bg-black hover:bg-primary duration-300 text-nowrap px-5 py-2 block mx-auto font-medium uppercase font-mono tracking-[2px]">choose
+                                    plan</button>
+                            </div>
+                        </div>
+                        <div class="px-2">
+                            <div class="border border-primary p-5 rounded-2xl space-y-5">
+                                <button
+                                    class="rounded-full text-white bg-primary px-3 py-2 block mx-auto font-semibold uppercase font-mono tracking-[2px]">Standard</button>
+                                <div class="text-center text-5xl font-bold before:content-['$'] before:text-sm 
+                                                    before:relative before:-top-6">30</div>
+                                <ul class="price-plans text-lg ">
+                                    <li><i class="ri-check-line font-semibold"></i> 03 Web Pages (Informative)</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Complete Designing</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Complete Deployment</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Free Domain Registration</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Cross Browser Compatible</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Cross Browser Compatible</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Cross Browser Compatible</li>
+                                </ul>
+                                <div class="border-t border-slate-300"></div>
+                                <div class="text-center">Give your startup a kick-start with Webbulls Website Startup
+                                </div>
+                                <button
+                                    class="modal-tog rounded-full text-white bg-black hover:bg-primary duration-300 text-nowrap px-5 py-2 block mx-auto font-medium uppercase font-mono tracking-[2px]">choose
+                                    plan</button>
+                            </div>
+                        </div>
+                        <div class="px-2">
+                            <div class="border border-primary p-5 rounded-2xl space-y-5">
+                                <button
+                                    class="rounded-full text-white bg-primary px-3 py-2 block mx-auto font-semibold uppercase font-mono tracking-[2px]">Premium</button>
+                                <div class="text-center text-5xl font-bold before:content-['$'] before:text-sm 
+                                                    before:relative before:-top-6">40</div>
+                                <ul class="price-plans text-lg ">
+                                    <li><i class="ri-check-line font-semibold"></i> 03 Web Pages (Informative)</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Complete Designing</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Complete Deployment</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Free Domain Registration</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Cross Browser Compatible</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Cross Browser Compatible</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Cross Browser Compatible</li>
+                                </ul>
+                                <div class="border-t border-slate-300"></div>
+                                <div class="text-center">Give your startup a kick-start with Webbulls Website Startup
+                                </div>
+                                <button
+                                    class="modal-tog rounded-full text-white bg-black hover:bg-primary duration-300 text-nowrap px-5 py-2 block mx-auto font-medium uppercase font-mono tracking-[2px]">choose
+                                    plan</button>
+                            </div>
+                        </div>
+                        <div class="px-2">
+                            <div class="border border-primary p-5 rounded-2xl space-y-5">
+                                <button
+                                    class="rounded-full text-white bg-primary px-3 py-2 block mx-auto font-semibold uppercase font-mono tracking-[2px]">Elite</button>
+                                <div class="text-center text-5xl font-bold before:content-['$'] before:text-sm 
+                                                    before:relative before:-top-6">30</div>
+                                <ul class="price-plans text-lg ">
+                                    <li><i class="ri-check-line font-semibold"></i> 03 Web Pages (Informative)</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Complete Designing</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Complete Deployment</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Free Domain Registration</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Cross Browser Compatible</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Cross Browser Compatible</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Cross Browser Compatible</li>
+                                </ul>
+                                <div class="border-t border-slate-300"></div>
+                                <div class="text-center">Give your startup a kick-start with Webbulls Website Startup
+                                </div>
+                                <button
+                                    class="modal-tog rounded-full text-white bg-black hover:bg-primary duration-300 text-nowrap px-5 py-2 block mx-auto font-medium uppercase font-mono tracking-[2px]">choose
+                                    plan</button>
+                            </div>
+                        </div>
+                        <div class="px-2">
+                            <div class="border border-primary p-5 rounded-2xl space-y-5">
+                                <button
+                                    class="rounded-full text-white bg-primary px-3 py-2 block mx-auto font-semibold uppercase font-mono tracking-[2px]">Elite</button>
+                                <div class="text-center text-5xl font-bold before:content-['$'] before:text-sm 
+                                                    before:relative before:-top-6">30</div>
+                                <ul class="price-plans text-lg ">
+                                    <li><i class="ri-check-line font-semibold"></i> 03 Web Pages (Informative)</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Complete Designing</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Complete Deployment</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Free Domain Registration</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Cross Browser Compatible</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Cross Browser Compatible</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Cross Browser Compatible</li>
+                                </ul>
+                                <div class="border-t border-slate-300"></div>
+                                <div class="text-center">Give your startup a kick-start with Webbulls Website Startup
+                                </div>
+                                <button
+                                    class="modal-tog rounded-full text-white bg-black hover:bg-primary duration-300 text-nowrap px-5 py-2 block mx-auto font-medium uppercase font-mono tracking-[2px]">choose
+                                    plan</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-2 tab-content py-5">
+                    <div class="responsive grid grid-cols-4 gap-x-3">
+                        <div class="px-2">
+                            <div class="border border-primary p-5 rounded-2xl space-y-5">
+                                <button
+                                    class="rounded-full text-white bg-primary px-3 py-2 block mx-auto font-semibold uppercase font-mono tracking-[2px]">Basic</button>
+                                <div class="text-center text-5xl font-bold before:content-['$'] before:text-sm 
+                                                    before:relative before:-top-6">30</div>
+                                <ul class="price-plans text-lg ">
+                                    <li><i class="ri-check-line font-semibold"></i> 03 Web Pages (Informative)</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Complete Designing</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Complete Deployment</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Free Domain Registration</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Cross Browser Compatible</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Cross Browser Compatible</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Cross Browser Compatible</li>
+                                </ul>
+                                <div class="border-t border-slate-300"></div>
+                                <div class="text-center">Give your startup a kick-start with Webbulls Website Startup
+                                </div>
+                                <button
+                                    class="modal-tog rounded-full text-white bg-black hover:bg-primary duration-300 text-nowrap px-5 py-2 block mx-auto font-medium uppercase font-mono tracking-[2px]">choose
+                                    plan</button>
+                            </div>
+                        </div>
+                        <div class="px-2">
+                            <div class="border border-primary p-5 rounded-2xl space-y-5">
+                                <button
+                                    class="rounded-full text-white bg-primary px-3 py-2 block mx-auto font-semibold uppercase font-mono tracking-[2px]">Standard</button>
+                                <div class="text-center text-5xl font-bold before:content-['$'] before:text-sm 
+                                                    before:relative before:-top-6">30</div>
+                                <ul class="price-plans text-lg ">
+                                    <li><i class="ri-check-line font-semibold"></i> 03 Web Pages (Informative)</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Complete Designing</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Complete Deployment</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Free Domain Registration</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Cross Browser Compatible</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Cross Browser Compatible</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Cross Browser Compatible</li>
+                                </ul>
+                                <div class="border-t border-slate-300"></div>
+                                <div class="text-center">Give your startup a kick-start with Webbulls Website Startup
+                                </div>
+                                <button
+                                    class="modal-tog rounded-full text-white bg-black hover:bg-primary duration-300 text-nowrap px-5 py-2 block mx-auto font-medium uppercase font-mono tracking-[2px]">choose
+                                    plan</button>
+                            </div>
+                        </div>
+                        <div class="px-2">
+                            <div class="border border-primary p-5 rounded-2xl space-y-5">
+                                <button
+                                    class="rounded-full text-white bg-primary px-3 py-2 block mx-auto font-semibold uppercase font-mono tracking-[2px]">Premium</button>
+                                <div class="text-center text-5xl font-bold before:content-['$'] before:text-sm 
+                                                    before:relative before:-top-6">40</div>
+                                <ul class="price-plans text-lg ">
+                                    <li><i class="ri-check-line font-semibold"></i> 03 Web Pages (Informative)</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Complete Designing</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Complete Deployment</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Free Domain Registration</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Cross Browser Compatible</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Cross Browser Compatible</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Cross Browser Compatible</li>
+                                </ul>
+                                <div class="border-t border-slate-300"></div>
+                                <div class="text-center">Give your startup a kick-start with Webbulls Website Startup
+                                </div>
+                                <button
+                                    class="modal-tog rounded-full text-white bg-black hover:bg-primary duration-300 text-nowrap px-5 py-2 block mx-auto font-medium uppercase font-mono tracking-[2px]">choose
+                                    plan</button>
+                            </div>
+                        </div>
+                        <div class="px-2">
+                            <div class="border border-primary p-5 rounded-2xl space-y-5">
+                                <button
+                                    class="rounded-full text-white bg-primary px-3 py-2 block mx-auto font-semibold uppercase font-mono tracking-[2px]">Elite</button>
+                                <div class="text-center text-5xl font-bold before:content-['$'] before:text-sm 
+                                                    before:relative before:-top-6">30</div>
+                                <ul class="price-plans text-lg ">
+                                    <li><i class="ri-check-line font-semibold"></i> 03 Web Pages (Informative)</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Complete Designing</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Complete Deployment</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Free Domain Registration</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Cross Browser Compatible</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Cross Browser Compatible</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Cross Browser Compatible</li>
+                                </ul>
+                                <div class="border-t border-slate-300"></div>
+                                <div class="text-center">Give your startup a kick-start with Webbulls Website Startup
+                                </div>
+                                <button
+                                    class="modal-tog rounded-full text-white bg-black hover:bg-primary duration-300 text-nowrap px-5 py-2 block mx-auto font-medium uppercase font-mono tracking-[2px]">choose
+                                    plan</button>
+                            </div>
+                        </div>
+                        <div class="px-2">
+                            <div class="border border-primary p-5 rounded-2xl space-y-5">
+                                <button
+                                    class="rounded-full text-white bg-primary px-3 py-2 block mx-auto font-semibold uppercase font-mono tracking-[2px]">Elite</button>
+                                <div class="text-center text-5xl font-bold before:content-['$'] before:text-sm 
+                                                    before:relative before:-top-6">30</div>
+                                <ul class="price-plans text-lg ">
+                                    <li><i class="ri-check-line font-semibold"></i> 03 Web Pages (Informative)</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Complete Designing</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Complete Deployment</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Free Domain Registration</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Cross Browser Compatible</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Cross Browser Compatible</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Cross Browser Compatible</li>
+                                </ul>
+                                <div class="border-t border-slate-300"></div>
+                                <div class="text-center">Give your startup a kick-start with Webbulls Website Startup
+                                </div>
+                                <button
+                                    class="modal-tog rounded-full text-white bg-black hover:bg-primary duration-300 text-nowrap px-5 py-2 block mx-auto font-medium uppercase font-mono tracking-[2px]">choose
+                                    plan</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-3 tab-content py-5">
+                    <div class="responsive grid grid-cols-4 gap-x-3">
+                        <div class="px-2">
+                            <div class="border border-primary p-5 rounded-2xl space-y-5">
+                                <button
+                                    class="rounded-full text-white bg-primary px-3 py-2 block mx-auto font-semibold uppercase font-mono tracking-[2px]">Basic</button>
+                                <div class="text-center text-5xl font-bold before:content-['$'] before:text-sm 
+                                                        before:relative before:-top-6">30</div>
+                                <ul class="price-plans text-lg ">
+                                    <li><i class="ri-check-line font-semibold"></i> 03 Web Pages (Informative)</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Complete Designing</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Complete Deployment</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Free Domain Registration</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Cross Browser Compatible</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Cross Browser Compatible</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Cross Browser Compatible</li>
+                                </ul>
+                                <div class="border-t border-slate-300"></div>
+                                <div class="text-center">Give your startup a kick-start with Webbulls Website Startup
+                                </div>
+                                <button
+                                    class="modal-tog rounded-full text-white bg-black hover:bg-primary duration-300 text-nowrap px-5 py-2 block mx-auto font-medium uppercase font-mono tracking-[2px]">choose
+                                    plan</button>
+                            </div>
+                        </div>
+                        <div class="px-2">
+                            <div class="border border-primary p-5 rounded-2xl space-y-5">
+                                <button
+                                    class="rounded-full text-white bg-primary px-3 py-2 block mx-auto font-semibold uppercase font-mono tracking-[2px]">Standard</button>
+                                <div class="text-center text-5xl font-bold before:content-['$'] before:text-sm 
+                                                        before:relative before:-top-6">30</div>
+                                <ul class="price-plans text-lg ">
+                                    <li><i class="ri-check-line font-semibold"></i> 03 Web Pages (Informative)</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Complete Designing</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Complete Deployment</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Free Domain Registration</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Cross Browser Compatible</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Cross Browser Compatible</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Cross Browser Compatible</li>
+                                </ul>
+                                <div class="border-t border-slate-300"></div>
+                                <div class="text-center">Give your startup a kick-start with Webbulls Website Startup
+                                </div>
+                                <button
+                                    class="modal-tog rounded-full text-white bg-black hover:bg-primary duration-300 text-nowrap px-5 py-2 block mx-auto font-medium uppercase font-mono tracking-[2px]">choose
+                                    plan</button>
+                            </div>
+                        </div>
+                        <div class="px-2">
+                            <div class="border border-primary p-5 rounded-2xl space-y-5">
+                                <button
+                                    class="rounded-full text-white bg-primary px-3 py-2 block mx-auto font-semibold uppercase font-mono tracking-[2px]">Premium</button>
+                                <div class="text-center text-5xl font-bold before:content-['$'] before:text-sm 
+                                                        before:relative before:-top-6">40</div>
+                                <ul class="price-plans text-lg ">
+                                    <li><i class="ri-check-line font-semibold"></i> 03 Web Pages (Informative)</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Complete Designing</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Complete Deployment</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Free Domain Registration</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Cross Browser Compatible</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Cross Browser Compatible</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Cross Browser Compatible</li>
+                                </ul>
+                                <div class="border-t border-slate-300"></div>
+                                <div class="text-center">Give your startup a kick-start with Webbulls Website Startup
+                                </div>
+                                <button
+                                    class="modal-tog rounded-full text-white bg-black hover:bg-primary duration-300 text-nowrap px-5 py-2 block mx-auto font-medium uppercase font-mono tracking-[2px]">choose
+                                    plan</button>
+                            </div>
+                        </div>
+                        <div class="px-2">
+                            <div class="border border-primary p-5 rounded-2xl space-y-5">
+                                <button
+                                    class="rounded-full text-white bg-primary px-3 py-2 block mx-auto font-semibold uppercase font-mono tracking-[2px]">Elite</button>
+                                <div class="text-center text-5xl font-bold before:content-['$'] before:text-sm 
+                                                        before:relative before:-top-6">30</div>
+                                <ul class="price-plans text-lg ">
+                                    <li><i class="ri-check-line font-semibold"></i> 03 Web Pages (Informative)</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Complete Designing</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Complete Deployment</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Free Domain Registration</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Cross Browser Compatible</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Cross Browser Compatible</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Cross Browser Compatible</li>
+                                </ul>
+                                <div class="border-t border-slate-300"></div>
+                                <div class="text-center">Give your startup a kick-start with Webbulls Website Startup
+                                </div>
+                                <button
+                                    class="modal-tog rounded-full text-white bg-black hover:bg-primary duration-300 text-nowrap px-5 py-2 block mx-auto font-medium uppercase font-mono tracking-[2px]">choose
+                                    plan</button>
+                            </div>
+                        </div>
+                        <div class="px-2">
+                            <div class="border border-primary p-5 rounded-2xl space-y-5">
+                                <button
+                                    class="rounded-full text-white bg-primary px-3 py-2 block mx-auto font-semibold uppercase font-mono tracking-[2px]">Elite</button>
+                                <div class="text-center text-5xl font-bold before:content-['$'] before:text-sm 
+                                                        before:relative before:-top-6">30</div>
+                                <ul class="price-plans text-lg ">
+                                    <li><i class="ri-check-line font-semibold"></i> 03 Web Pages (Informative)</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Complete Designing</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Complete Deployment</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Free Domain Registration</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Cross Browser Compatible</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Cross Browser Compatible</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Cross Browser Compatible</li>
+                                </ul>
+                                <div class="border-t border-slate-300"></div>
+                                <div class="text-center">Give your startup a kick-start with Webbulls Website Startup
+                                </div>
+                                <button
+                                    class="modal-tog rounded-full text-white bg-black hover:bg-primary duration-300 text-nowrap px-5 py-2 block mx-auto font-medium uppercase font-mono tracking-[2px]">choose
+                                    plan</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-4 tab-content py-5">
+                    <div class="responsive grid grid-cols-4 gap-x-3">
+                        <div class="px-2">
+                            <div class="border border-primary p-5 rounded-2xl space-y-5">
+                                <button
+                                    class="rounded-full text-white bg-primary px-3 py-2 block mx-auto font-semibold uppercase font-mono tracking-[2px]">Basic</button>
+                                <div class="text-center text-5xl font-bold before:content-['$'] before:text-sm 
+                                                        before:relative before:-top-6">30</div>
+                                <ul class="price-plans text-lg ">
+                                    <li><i class="ri-check-line font-semibold"></i> 03 Web Pages (Informative)</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Complete Designing</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Complete Deployment</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Free Domain Registration</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Cross Browser Compatible</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Cross Browser Compatible</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Cross Browser Compatible</li>
+                                </ul>
+                                <div class="border-t border-slate-300"></div>
+                                <div class="text-center">Give your startup a kick-start with Webbulls Website Startup
+                                </div>
+                                <button
+                                    class="modal-tog rounded-full text-white bg-black hover:bg-primary duration-300 text-nowrap px-5 py-2 block mx-auto font-medium uppercase font-mono tracking-[2px]">choose
+                                    plan</button>
+                            </div>
+                        </div>
+                        <div class="px-2">
+                            <div class="border border-primary p-5 rounded-2xl space-y-5">
+                                <button
+                                    class="rounded-full text-white bg-primary px-3 py-2 block mx-auto font-semibold uppercase font-mono tracking-[2px]">Standard</button>
+                                <div class="text-center text-5xl font-bold before:content-['$'] before:text-sm 
+                                                        before:relative before:-top-6">30</div>
+                                <ul class="price-plans text-lg ">
+                                    <li><i class="ri-check-line font-semibold"></i> 03 Web Pages (Informative)</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Complete Designing</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Complete Deployment</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Free Domain Registration</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Cross Browser Compatible</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Cross Browser Compatible</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Cross Browser Compatible</li>
+                                </ul>
+                                <div class="border-t border-slate-300"></div>
+                                <div class="text-center">Give your startup a kick-start with Webbulls Website Startup
+                                </div>
+                                <button
+                                    class="modal-tog rounded-full text-white bg-black hover:bg-primary duration-300 text-nowrap px-5 py-2 block mx-auto font-medium uppercase font-mono tracking-[2px]">choose
+                                    plan</button>
+                            </div>
+                        </div>
+                        <div class="px-2">
+                            <div class="border border-primary p-5 rounded-2xl space-y-5">
+                                <button
+                                    class="rounded-full text-white bg-primary px-3 py-2 block mx-auto font-semibold uppercase font-mono tracking-[2px]">Premium</button>
+                                <div class="text-center text-5xl font-bold before:content-['$'] before:text-sm 
+                                                        before:relative before:-top-6">40</div>
+                                <ul class="price-plans text-lg ">
+                                    <li><i class="ri-check-line font-semibold"></i> 03 Web Pages (Informative)</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Complete Designing</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Complete Deployment</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Free Domain Registration</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Cross Browser Compatible</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Cross Browser Compatible</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Cross Browser Compatible</li>
+                                </ul>
+                                <div class="border-t border-slate-300"></div>
+                                <div class="text-center">Give your startup a kick-start with Webbulls Website Startup
+                                </div>
+                                <button
+                                    class="modal-tog rounded-full text-white bg-black hover:bg-primary duration-300 text-nowrap px-5 py-2 block mx-auto font-medium uppercase font-mono tracking-[2px]">choose
+                                    plan</button>
+                            </div>
+                        </div>
+                        <div class="px-2">
+                            <div class="border border-primary p-5 rounded-2xl space-y-5">
+                                <button
+                                    class="rounded-full text-white bg-primary px-3 py-2 block mx-auto font-semibold uppercase font-mono tracking-[2px]">Elite</button>
+                                <div class="text-center text-5xl font-bold before:content-['$'] before:text-sm 
+                                                        before:relative before:-top-6">30</div>
+                                <ul class="price-plans text-lg ">
+                                    <li><i class="ri-check-line font-semibold"></i> 03 Web Pages (Informative)</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Complete Designing</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Complete Deployment</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Free Domain Registration</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Cross Browser Compatible</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Cross Browser Compatible</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Cross Browser Compatible</li>
+                                </ul>
+                                <div class="border-t border-slate-300"></div>
+                                <div class="text-center">Give your startup a kick-start with Webbulls Website Startup
+                                </div>
+                                <button
+                                    class="modal-tog rounded-full text-white bg-black hover:bg-primary duration-300 text-nowrap px-5 py-2 block mx-auto font-medium uppercase font-mono tracking-[2px]">choose
+                                    plan</button>
+                            </div>
+                        </div>
+                        <div class="px-2">
+                            <div class="border border-primary p-5 rounded-2xl space-y-5">
+                                <button
+                                    class="rounded-full text-white bg-primary px-3 py-2 block mx-auto font-semibold uppercase font-mono tracking-[2px]">Elite</button>
+                                <div class="text-center text-5xl font-bold before:content-['$'] before:text-sm 
+                                                        before:relative before:-top-6">30</div>
+                                <ul class="price-plans text-lg ">
+                                    <li><i class="ri-check-line font-semibold"></i> 03 Web Pages (Informative)</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Complete Designing</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Complete Deployment</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Free Domain Registration</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Cross Browser Compatible</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Cross Browser Compatible</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Cross Browser Compatible</li>
+                                </ul>
+                                <div class="border-t border-slate-300"></div>
+                                <div class="text-center">Give your startup a kick-start with Webbulls Website Startup
+                                </div>
+                                <button
+                                    class="modal-tog rounded-full text-white bg-black hover:bg-primary duration-300 text-nowrap px-5 py-2 block mx-auto font-medium uppercase font-mono tracking-[2px]">choose
+                                    plan</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-5 tab-content py-5">
+                    <div class="responsive grid grid-cols-4 gap-x-3">
+                        <div class="px-2">
+                            <div class="border border-primary p-5 rounded-2xl space-y-5">
+                                <button
+                                    class="rounded-full text-white bg-primary px-3 py-2 block mx-auto font-semibold uppercase font-mono tracking-[2px]">Basic</button>
+                                <div class="text-center text-5xl font-bold before:content-['$'] before:text-sm 
+                                                        before:relative before:-top-6">30</div>
+                                <ul class="price-plans text-lg ">
+                                    <li><i class="ri-check-line font-semibold"></i> 03 Web Pages (Informative)</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Complete Designing</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Complete Deployment</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Free Domain Registration</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Cross Browser Compatible</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Cross Browser Compatible</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Cross Browser Compatible</li>
+                                </ul>
+                                <div class="border-t border-slate-300"></div>
+                                <div class="text-center">Give your startup a kick-start with Webbulls Website Startup
+                                </div>
+                                <button
+                                    class="modal-tog rounded-full text-white bg-black hover:bg-primary duration-300 text-nowrap px-5 py-2 block mx-auto font-medium uppercase font-mono tracking-[2px]">choose
+                                    plan</button>
+                            </div>
+                        </div>
+                        <div class="px-2">
+                            <div class="border border-primary p-5 rounded-2xl space-y-5">
+                                <button
+                                    class="rounded-full text-white bg-primary px-3 py-2 block mx-auto font-semibold uppercase font-mono tracking-[2px]">Standard</button>
+                                <div class="text-center text-5xl font-bold before:content-['$'] before:text-sm 
+                                                        before:relative before:-top-6">30</div>
+                                <ul class="price-plans text-lg ">
+                                    <li><i class="ri-check-line font-semibold"></i> 03 Web Pages (Informative)</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Complete Designing</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Complete Deployment</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Free Domain Registration</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Cross Browser Compatible</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Cross Browser Compatible</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Cross Browser Compatible</li>
+                                </ul>
+                                <div class="border-t border-slate-300"></div>
+                                <div class="text-center">Give your startup a kick-start with Webbulls Website Startup
+                                </div>
+                                <button
+                                    class="modal-tog rounded-full text-white bg-black hover:bg-primary duration-300 text-nowrap px-5 py-2 block mx-auto font-medium uppercase font-mono tracking-[2px]">choose
+                                    plan</button>
+                            </div>
+                        </div>
+                        <div class="px-2">
+                            <div class="border border-primary p-5 rounded-2xl space-y-5">
+                                <button
+                                    class="rounded-full text-white bg-primary px-3 py-2 block mx-auto font-semibold uppercase font-mono tracking-[2px]">Premium</button>
+                                <div class="text-center text-5xl font-bold before:content-['$'] before:text-sm 
+                                                        before:relative before:-top-6">40</div>
+                                <ul class="price-plans text-lg ">
+                                    <li><i class="ri-check-line font-semibold"></i> 03 Web Pages (Informative)</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Complete Designing</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Complete Deployment</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Free Domain Registration</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Cross Browser Compatible</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Cross Browser Compatible</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Cross Browser Compatible</li>
+                                </ul>
+                                <div class="border-t border-slate-300"></div>
+                                <div class="text-center">Give your startup a kick-start with Webbulls Website Startup
+                                </div>
+                                <button
+                                    class="modal-tog rounded-full text-white bg-black hover:bg-primary duration-300 text-nowrap px-5 py-2 block mx-auto font-medium uppercase font-mono tracking-[2px]">choose
+                                    plan</button>
+                            </div>
+                        </div>
+                        <div class="px-2">
+                            <div class="border border-primary p-5 rounded-2xl space-y-5">
+                                <button
+                                    class="rounded-full text-white bg-primary px-3 py-2 block mx-auto font-semibold uppercase font-mono tracking-[2px]">Elite</button>
+                                <div class="text-center text-5xl font-bold before:content-['$'] before:text-sm 
+                                                        before:relative before:-top-6">30</div>
+                                <ul class="price-plans text-lg ">
+                                    <li><i class="ri-check-line font-semibold"></i> 03 Web Pages (Informative)</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Complete Designing</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Complete Deployment</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Free Domain Registration</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Cross Browser Compatible</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Cross Browser Compatible</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Cross Browser Compatible</li>
+                                </ul>
+                                <div class="border-t border-slate-300"></div>
+                                <div class="text-center">Give your startup a kick-start with Webbulls Website Startup
+                                </div>
+                                <button
+                                    class="modal-tog rounded-full text-white bg-black hover:bg-primary duration-300 text-nowrap px-5 py-2 block mx-auto font-medium uppercase font-mono tracking-[2px]">choose
+                                    plan</button>
+                            </div>
+                        </div>
+                        <div class="px-2">
+                            <div class="border border-primary p-5 rounded-2xl space-y-5">
+                                <button
+                                    class="rounded-full text-white bg-primary px-3 py-2 block mx-auto font-semibold uppercase font-mono tracking-[2px]">Elite</button>
+                                <div class="text-center text-5xl font-bold before:content-['$'] before:text-sm 
+                                                        before:relative before:-top-6">30</div>
+                                <ul class="price-plans text-lg ">
+                                    <li><i class="ri-check-line font-semibold"></i> 03 Web Pages (Informative)</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Complete Designing</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Complete Deployment</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Free Domain Registration</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Cross Browser Compatible</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Cross Browser Compatible</li>
+                                    <li><i class="ri-check-line font-semibold"></i> Cross Browser Compatible</li>
+                                </ul>
+                                <div class="border-t border-slate-300"></div>
+                                <div class="text-center">Give your startup a kick-start with Webbulls Website Startup
+                                </div>
+                                <button
+                                    class="modal-tog rounded-full text-white bg-black hover:bg-primary duration-300 text-nowrap px-5 py-2 block mx-auto font-medium uppercase font-mono tracking-[2px]">choose
+                                    plan</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal fixed top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 duration-300 hidden z-20">
+        <div class="lg:w-[400px] md:w-[350px]">
+            <div class="bg-white p-6 rounded-xl space-y-3 border border-slate-500">
+                <div class="text-3xl capitalize font-semibold text-center">Get In Touch With Us</div>
+
+                <form class="space-y-4" action="#">
+                    <input class="border border-slate-300 w-full rounded-md p-2 outline-none" placeholder="Your Name"
+                        type="text">
+                    <input class="border border-slate-300 w-full rounded-md p-2 outline-none"
+                        placeholder="Your Phone Number" type="text">
+                    <input class="border border-slate-300 w-full rounded-md p-2 outline-none"
+                        placeholder="Email Address" type="text">
+                    <select class="border border-black text-neutral-400 w-full rounded-md p-2 outline-none" name=""
+                        id="">
+                        <option class="" value="">Which service are you interested in?</option>
+                    </select>
+                    <input class="border border-slate-300 w-full rounded-md p-2 outline-none" placeholder="Message"
+                        type="text">
+                    <button
+                        class="bg-black text-white hover:bg-primary duration-300 uppercase rounded-md w-full p-2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-black text-white overflow-hidden">
+        <div class="container mx-auto px-6 lg:max-w-[1200px] py-12" data-aos="fade-up">
+            <div class="grid max-sm:text-center lg:grid-cols-4 md:gap-16 sm:gap-3 sm:grid-cols-3 grid-cols-1 gap-12">
+                <div class="lg:col-span-1 md:col-span-3">
+                    <a href="index.html">
+                        <img class="block mx-auto lg:h-[100px] h-[150px] lg:w-[100px] w-[150px] object-cover"
+                            src="accets/images/Logo.png" alt="">
+                    </a>
+                    <div class="my-4 text-sm">We don’t just market brands we build them. Whether you're a startup making
+                        your
+                        debut or an established business ready for the next level, we craft data driven, results focused
+                        marketing strategies that set you apart. </div>
+                </div>
+                <div>
+                    <div class="w-fit mx-auto">
+                        <ul class="space-y-2">
+                            <li><a class="text-xl font-semibold">Pages</a></li>
+                            <li><a class="text-sm" href="index.html">Home</a></li>
+                            <li><a class="text-sm" href="What-We-Do.html">What We Do</a></li>
+                            <li><a class="text-sm" href="How-It-Works.html">How It Works</a></li>
+                            <li><a class="text-sm" href="Pricing-and-Packages.html">Pricing and Packages</a></li>
+                            <li><a class="text-sm" href="Testimonials.html">Testimonials</a></li>
+                            <li><a class="text-sm" href="Blog.html">Blogs</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <div class="w-fit mx-auto">
+                        <ul class="space-y-2">
+                            <li><a class="text-xl font-semibold">Services</a></li>
+                            <li><a class="text-sm" href="Social-Media-Management.html">Social Media Management</a>
+                            </li>
+                            <li><a class="text-sm" href="Search-Engine-Optimization.html">Search Engine
+                                    Optimization</a>
+                            </li>
+                            <li><a class="text-sm" href="Email-Marketing-Services.html">Email Marketing Services</a>
+                            </li>
+                            <li><a class="text-sm" href="Videography-Photography.html">Videography/Photography</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <div class="w-fit mx-auto">
+                        <ul class="space-y-2">
+                            <li><a class="text-xl font-semibold">Newsletter</a></li>
+                            <li
+                                class="bg-white border overflow-hidden flex justify-between rounded-full md:w-auto w-[300px] mx-auto">
+                                <input class="outline-none text-neutral-600 text-sm pl-3 w-full" type="text"
+                                    placeholder="Enter your email here">
+                                <button
+                                    class="bg-neutral-800 hover:bg-primary hover:text-white duration-300 p-2 py-3 text-xs border-0">SUBSCRIBE</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-black">
+            <div class="container mx-auto px-6 lg:max-w-[1200px] md:border-t border-slate-700 py-3">
+                <div class="grid items-center max-sm:text-center md:grid-flow-col md:gap-5 gap-12">
+                    <div>
+                        <div class="font-semibold">Copyright by</div>
+                        <div>Aurum House Marketing Agency</div>
+                    </div>
+                    <div>
+                        <div class="font-semibold">Contact Us</div>
+                        <div>info@aurumhouse.com</div>
+                    </div>
+                    <div class="space-x-4 text-center">
+                        <i
+                            class="text-xl p-1 bg-white hover:bg-primary hover:text-white duration-300 cursor-pointer text-black rounded-md ri-facebook-line"></i>
+                        <i
+                            class="text-xl p-1 bg-white hover:bg-primary hover:text-white duration-300 cursor-pointer text-black rounded-md ri-instagram-line"></i>
+                        <i
+                            class="text-xl p-1 bg-white hover:bg-primary hover:text-white duration-300 cursor-pointer text-black rounded-md ri-linkedin-box-line"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+
+    <script>
+        AOS.init({
+            once: true,
+            duration: 1000
+        });
+
+
+        $('.responsive').slick({
+            dots: true,
+            infinite: true,
+            speed: 500,
+            autoplay: true,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            arrows: true,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                        infinite: true,
+                        dots: true
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        });
+    </script>
+
+
+    <script>
+        const tabs = document.querySelectorAll(".tabs");
+        const tab = document.querySelectorAll(".tab");
+        const panel = document.querySelectorAll(".tab-content");
+
+        function onTabClick(event) {
+            for (let i = 0; i < tab.length; i++) {
+                tab[i].classList.remove("active");
+            }
+
+            for (let i = 0; i < panel.length; i++) {
+                panel[i].classList.remove("active");
+            }
+
+            event.target.classList.add('active');
+            let classString = event.target.getAttribute('data-target');
+            document.getElementById('panels').getElementsByClassName(classString)[0].classList.add("active");
+        }
+
+        for (let i = 0; i < tab.length; i++) {
+            tab[i].addEventListener('click', onTabClick, false);
+        }
+    </script>
+</body>
+
+</html>
