@@ -800,6 +800,10 @@ video {
   list-style-type: disc;
 }
 
+.list-none {
+  list-style-type: none;
+}
+
 .grid-flow-col {
   grid-auto-flow: column;
 }
@@ -951,10 +955,6 @@ video {
 
 .text-nowrap {
   text-wrap: nowrap;
-}
-
-.text-pretty {
-  text-wrap: pretty;
 }
 
 .rounded {
@@ -1264,6 +1264,10 @@ video {
 
 .text-center {
   text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
 }
 
 .text-start {
