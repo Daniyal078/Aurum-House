@@ -1,0 +1,783 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <link href="custom.css" rel="stylesheet">
+
+</head>
+<style>
+    .acc-collapse {
+        height: 0px;
+        overflow-y: hidden;
+        transition: 0.3s ease-in;
+    }
+
+    .box::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 0%;
+        width: 0%;
+        border-radius: 100%;
+        /* background: linear-gradient(180deg, rgba(59, 68, 67, 0) 0%, rgba(59, 68, 67, 0.42) 100%); */
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.671)), url('accets/images/bg-7098phj.jpg');
+        backdrop-filter: blur(10px);
+        z-index: -1;
+    }
+
+    .box::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 0%;
+        width: 0%;
+        border-radius: 100%;
+        background: linear-gradient(180deg, rgba(59, 68, 67, 0) 0%, rgba(59, 68, 67, 0.42) 100%);
+        /* background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.671)), url('accets/images/bg-7098phj.jpg'); */
+        backdrop-filter: blur(5px);
+        z-index: -1;
+    }
+
+    .box:hover::before {
+        width: 100%;
+        height: 100%;
+        transition: all 0.8s ease;
+    }
+
+    .box:hover::after {
+        width: 100%;
+        height: 100%;
+        transition: all 0.8s ease;
+    }
+
+    .box:hover {
+        color: #fff;
+    }
+
+    .box:hover img {
+        mix-blend-mode: lighten;
+    }
+
+    .Testimonials-box {
+        background: linear-gradient(0deg, rgb(31, 31, 31) 28%, #ffffff 0%);
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+        color: #000;
+    }
+</style>
+
+<body class="min-w-[360px]">
+    <div class="mask hidden h-screen w-screen bg-black opacity-60 z-10 fixed"></div>
+    <!-- navbar -->
+    <nav class="bg-black py-2">
+        <div class="container mx-auto px-6 lg:max-w-[1200px]">
+            <div class="grid items-center justify-between grid-flow-col gap-5">
+                <div class="space-y-2">
+                    <a href="index.html" class="text-2xl font-semibold"><img class="w-[150px]"
+                            src="accets/images/Logo.png" alt=""></a>
+                </div>
+
+                <div
+                    class="responsive-nav lg:relative fixed duration-300 max-lg:top-0 max-lg:-left-96 z-20 max-lg:h-screen max-lg:p-8 lg:bg-black bg-white">
+                    <ul
+                        class="flex lg:justify-between max-lg:flex-col xl:gap-8 lg:gap-4 lg:text-white text-black gap-6">
+                        <a class="text-nowrap" href="index.html">
+                            <li>Home</li>
+                        </a>
+                        <a class="text-nowrap" href="What-We-Do.html">
+                            <li>What We Do</li>
+                        </a>
+                        <a class="text-nowrap" href="How-It-Works.html">
+                            <li>How It Works</li>
+                        </a>
+                        <div class="relative max-lg:hidden group">
+                            <a class="text-nowrap">
+                                <li>Services <i class="ri-arrow-down-s-line"></i></li>
+                            </a>
+                            <div class="absolute z-10 hidden group-hover:block bg-white text-black border rounded">
+                                <ul class="">
+                                    <a class="text-nowrap" href="Social-Media-Management.html">
+                                        <li class="border-t p-3 text-sm hover:bg-primary hover:text-white duration-300">
+                                            Social Media Management</li>
+                                    </a>
+                                    <a class="text-nowrap" href="Search-Engine-Optimization.html">
+                                        <li class="border-t p-3 text-sm hover:bg-primary hover:text-white duration-300">
+                                            Search Engine Optimization</li>
+                                    </a>
+                                    <a class="text-nowrap" href="Email-Marketing-Services.html">
+                                        <li class="border-t p-3 text-sm hover:bg-primary hover:text-white duration-300">
+                                            Email Marketing Services</li>
+                                    </a>
+                                    <a class="text-nowrap" href="Videography-Photography.html">
+                                        <li class="border-t p-3 text-sm hover:bg-primary hover:text-white duration-300">
+                                            Videography/Photography</li>
+                                    </a>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="lg:hidden">
+                            <div class="accordian-head flex items-center justify-between cursor-pointer">
+                                <div class="font-semibold align-middle">Our Services </div>
+                                <i
+                                    class="ri-add-line text-black rounded-full px-2 py-1 text-sx transition border duration-500 ease-in-out bg-slate-100"></i>
+                            </div>
+                            <div class="accordian-body acc-collapse">
+                                <ul class="">
+                                    <a class="text-nowrap" href="Social-Media-Management.html">
+                                        <li class="border-slate-200 px-3 py-2 text-sm">Social Media Management</li>
+                                    </a>
+                                    <a class="text-nowrap" href="Search-Engine-Optimization.html">
+                                        <li class="border-slate-200 px-3 py-2 text-sm">Search Engine Optimization
+                                        </li>
+                                    </a>
+                                    <a class="text-nowrap" href="Email-Marketing-Services.html">
+                                        <li class="border-slate-200 px-3 py-2 text-sm">Email Marketing Services</li>
+                                    </a>
+                                    <a class="text-nowrap" href="Videography-Photography.html">
+                                        <li class="border-slate-200 px-3 py-2 text-sm">Videography/Photography</li>
+                                    </a>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <a class="text-nowrap" href="Pricing-and-Packages.html">
+                            <li>Pricing and Packages</li>
+                        </a>
+                        <!-- <a class="text-nowrap" href="Testimonials.html">
+                            <li>Testimonials</li>
+                        </a> -->
+                        <a class="text-nowrap" href="Blog.html">
+                            <li>Blogs</li>
+                        </a>
+                        <a class="lg:hidden text-nowrap" href="tel:(786)-416-6767">
+                            <li><i class="ri-phone-line text-primary text-2xl"></i> (786)-416-6767</li>
+                        </a>
+                        <a class="lg:hidden text-nowrap" href="mailto:(786)-416-6767">
+                            <li><i class="ri-mail-line text-primary text-2xl"></i> info@thehomedefenders.com</li>
+                        </a>
+                    </ul>
+                </div>
+
+                <div>
+                    <a href="tel:+1012 3456 789">
+                        <button
+                            class="lg:block hidden bg-white hover:bg-primary hover:text-white duration-300 px-4 py-2 rounded-3xl text-nowrap">
+                            <i class="ri-phone-fill text-xl"></i> <span class="font-bold">+1012 3456 789</span></button>
+                    </a>
+                    <a class="lg:hidden" href="#">
+                        <li><i class="ri-menu-3-line text-white text-2xl rounded-full nav-Toggle"></i></li>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- navbar end -->
+
+
+    <!-- hero section -->
+    <section class="bg-[url(accets/images/hero-bg.jpg)] bg-cover bg-center bg-no-repeat">
+        <div class="bg-[#000000d0] bg-opacity-90 h-full lg:py-20 py-10 overflow-hidden">
+            <div class="container mx-auto px-6 lg:max-w-[1200px]">
+                <div class="grid items-center justify-around md:grid-flow-col gap-10">
+                    <div class="space-y-5" data-aos="fade-right">
+                        <h1 class="xl:text-5xl lg:text-4xl text-3xl text-white font-bold">Welcome to <span
+                                class="text-primary">Aurum House</span>
+                            <br class="lg:block hidden">Marketing Agency
+                        </h1>
+                        <div class="xl:text-3xl md:lg:text-2xl font-semibold text-primary">Your Strategic Partner in
+                            Digital Growth</div>
+                        <div class="xl:text-xl font-thin text-white">We don’t just market brands—we build them. Whether
+                            you're a
+                            startup making your debut or an established business ready for the next level, we craft
+                            data-driven, results-focused marketing strategies that set you apart.</div>
+
+                    </div>
+                    <div class="lg:px-16" data-aos="fade-left">
+                        <div class="bg-white p-6 rounded-xl space-y-3 border border-slate-500">
+                            <div class="text-3xl capitalize font-semibold text-center">Get In Touch With Us</div>
+
+                            <form class="space-y-4" action="#">
+                                <input class="border border-slate-300 w-full rounded-md p-2 outline-none"
+                                    placeholder="Your Name" type="text">
+                                <input class="border border-slate-300 w-full rounded-md p-2 outline-none"
+                                    placeholder="Your Phone Number" type="text">
+                                <input class="border border-slate-300 w-full rounded-md p-2 outline-none"
+                                    placeholder="Email Address" type="text">
+                                <select
+                                    class="border border-slate-300 text-neutral-400 w-full rounded-md p-2 outline-none"
+                                    name="" id="">
+                                    <option class="" value="">Social Media Management</option>
+                                    <option class="" value="">Search Engine Optimization</option>
+                                    <option class="" value="">Email Marketing Services</option>
+                                    <option class="" value="">Videography/Photography</option>
+                                </select>
+                                <input class="border border-slate-300 w-full rounded-md p-2 outline-none"
+                                    placeholder="Message" type="text">
+                                <button
+                                    class="bg-black text-white hover:bg-primary duration-300 uppercase rounded-md w-full p-2">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- hero section end -->
+
+
+    <section class="py-10 overflow-hidden">
+        <div class="container mx-auto px-6 lg:max-w-[1200px] space-y-5">
+            <div>
+                <!-- <div class="text-xl font-semibold text-center text-primary" data-aos="fade-down"> Our Services</div> -->
+                <div class="text-center text-4xl font-bold" data-aos="fade-down">What We Do Best</span></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-4">
+                <div class="bg-black rounded-lg p-5 space-y-4 lg:h-[250px]" data-aos="fade-right">
+                    <img class="w-[50px] p-1" src="accets/images/Website Development & Optimization@2x.png" alt="">
+                    <div class="lg:text-2xl font-semibold text-primary">Website Development & Optimization</div>
+                    <div class="text-slate-200">High-performing, user-friendly websites that turn visitors into
+                        customers.
+                    </div>
+                </div>
+                <div class="bg-black rounded-lg p-5 space-y-4 lg:h-[250px]" data-aos="fade-down">
+                    <img class="w-[50px] p-1" src="accets/images/Group 1000003548@2x.png" alt="">
+                    <div class="lg:text-2xl font-semibold text-primary">Content Creation & Branding</div>
+                    <div class="text-slate-200">Eye-catching visuals and compelling content that amplify your message.
+                    </div>
+                </div>
+                <div class="bg-black rounded-lg p-5 space-y-4 lg:h-[250px]" data-aos="fade-left">
+                    <img class="w-[50px] p-1" src="accets/images/Group 1000003548@2x.png" alt="">
+                    <div class="lg:text-2xl font-semibold text-primary">Strategic Digital Marketing</div>
+                    <div class="text-slate-200">Targeted campaigns that convert.</div>
+                </div>
+                <div class="bg-black rounded-lg p-5 space-y-4 lg:h-[250px]" data-aos="fade-right">
+                    <img class="w-[50px] p-1" src="accets/images/Group 1000003547@2x.png" alt="">
+                    <div class="lg:text-2xl font-semibold text-primary">Videography &
+                        Photography </div>
+                    <div class="text-slate-200">Stunning visuals that bring your brand to life.</div>
+                </div>
+                <div class="bg-black rounded-lg p-5 space-y-4 lg:h-[250px]" data-aos="zoom-in">
+                    <img class="w-[50px] p-1" src="accets/images/Group 1000003551@2x.png" alt="">
+                    <div class="lg:text-2xl font-semibold text-primary">SEO & Paid Advertising</div>
+                    <div class="text-slate-200">Get found, get clicks, get results.</div>
+                </div>
+                <div class="bg-black rounded-lg p-5 space-y-4 lg:h-[250px]" data-aos="fade-left">
+                    <img class="w-[50px] p-1" src="accets/images/Group 1000003550@2x.png" alt="">
+                    <div class="lg:text-2xl font-semibold text-primary">Social Media Management</div>
+                    <div class="text-slate-200">Build and nurture a loyal online community.</div>
+                </div>
+                <div class="bg-black rounded-lg p-5 space-y-4 lg:h-[250px]" data-aos="fade-right">
+                    <img class="w-[50px] p-1" src="accets/images/Group 1000003549@2x.png" alt="">
+                    <div class="lg:text-2xl font-semibold text-primary">Analytics & Performance
+                        Tracking</div>
+                    <div class="text-slate-200">Data-driven insights to refine and optimize strategies.</div>
+                </div>
+                <div class="bg-black rounded-lg p-5 space-y-4 lg:h-[250px]" data-aos="fade-up">
+                    <img class="w-[50px] p-1" src="accets/images/Group 1000003552@2x.png" alt="">
+                    <div class="lg:text-2xl font-semibold text-primary">Email Marketing</div>
+                    <div class="text-slate-200">Personalized campaigns that drive engagement and conversions.</div>
+                </div>
+                <div class="bg-black rounded-lg p-5 space-y-4 lg:h-[250px]" data-aos="fade-left">
+                    <img class="w-[50px] p-1" src="accets/images/Group 1000003552@2x-1.png" alt="">
+                    <div class="lg:text-2xl font-semibold text-primary">Q/A Testing</div>
+                    <div class="text-slate-200">Optimize conversions with data-driven experiments and split testing
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="bg-[url(accets/images/hero-bg.jpg)] bg-cover bg-center bg-no-repeat overflow-hidden">
+        <div class="bg-[#000000d0] bg-opacity-90 h-full lg:py-20 py-10">
+            <div class="container mx-auto px-6 lg:max-w-[1200px] space-y-3">
+                <div class="grid md:grid-cols-3">
+                    <div class="md:col-span-1" data-aos="fade-right">
+                        <img class="block mx-auto h-[500px] object-contain"
+                            src="accets/images/a7195bc4a5ea9630d7db4caa76ed1f6c.png" alt="">
+                    </div>
+
+                    <div class="md:col-span-2 space-y-4" data-aos="fade-left">
+                        <div class="text-primary text-2xl font-semibold">Why Choose</div>
+                        <div class="text-4xl font-bold text-white">Aurum House?</div>
+                        <ul class="list-disc space-y-4 pl-6">
+                            <li class="text-lg text-slate-200"><span class="font-bold text-white">Bespoke Marketing
+                                    Strategies</span> – Tailored
+                                solutions designed for your
+                                brand’s unique needs.</li>
+                            <li class="text-lg text-slate-200"><span class="font-bold text-white">Comprehensive Digital
+                                    Services</span> – We offer
+                                everything from branding to
+                                content creation, web development, and digital marketing.</li>
+                            <li class="text-lg text-slate-200"><span class="font-bold text-white">Growth-Driven
+                                    Results</span> – Our focus is on
+                                tangible, measurable
+                                success—higher engagement, visibility, and revenue.</li>
+                            <li class="text-lg text-slate-200"><span class="font-bold text-white">A Dedicated
+                                    Team</span> – We act as an extension
+                                of your business, aligning our
+                                efforts with your goals.</li>
+                            <li class="text-lg text-slate-200"><span class="font-bold text-white">Proven Track
+                                    Record</span> – Case studies and
+                                testimonials from satisfied
+                                clients demonstrate our ability to deliver.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="py-10 overflow-hidden">
+        <div class="container mx-auto px-6 lg:max-w-[1200px] space-y-6">
+            <div class="text-center text-4xl font-bold aos-init aos-animate capitalize" data-aos="fade-down">Who we work
+                with</div>
+
+            <p class="text-lg text-center" data-aos="fade-down">We partner with businesses serious about growth and
+                understand the
+                power of strategic marketing. Whether launching a brand, scaling your operations, or redefining your
+                digital presence, our tailored
+                solutions ensure you stand out in a competitive market. Our expertise spans industries including:</p>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="space-y-5" data-aos="fade-right">
+                    <div class="space-y-2">
+                        <div class="text-2xl font-semibold"><i class="ri-checkbox-circle-line"></i> E-commerce
+                        </div>
+                        <p class="text-lg">Drive traffic, increase conversions, and build a loyal customer base.</p>
+                    </div>
+                    <div class="space-y-2">
+                        <div class="text-2xl font-semibold"><i class="ri-checkbox-circle-line"></i> Hospitality
+                            &
+                            Lifestyle
+                        </div>
+                        <p class="text-lg">Create engaging experiences that captivate and convert your audience.</p>
+                    </div>
+                    <div class="space-y-2">
+                        <div class="text-2xl font-semibold"><i class="ri-checkbox-circle-line"></i> Professional
+                            Services
+                        </div>
+                        <p class="text-lg">Strengthen your brand authority and generate qualified leads.</p>
+                    </div>
+                </div>
+                <div class="space-y-5" data-aos="fade-left">
+                    <div class="space-y-2">
+                        <div class="text-2xl font-semibold"><i class="ri-checkbox-circle-line"></i> Technology &
+                            Startups
+                        </div>
+                        <p class="text-lg">Position your innovative brand for success with targeted marketing.</p>
+                    </div>
+                    <div class="space-y-2">
+                        <div class="text-2xl font-semibold"><i class="ri-checkbox-circle-line"></i> Health &
+                            Wellness
+                        </div>
+                        <p class="text-lg">Enhance credibility and visibility through expert digital strategies.</p>
+                    </div>
+                    <div class="space-y-2">
+                        <div class="text-2xl font-semibold"><i class="ri-checkbox-circle-line"></i> Real Estate
+                            &
+                            Luxury Brands
+                        </div>
+                        <p class="text-lg">Showcase premium properties and high-end services with compelling content and
+                            strategic digital marketing.</p>
+                    </div>
+                </div>
+
+            </div>
+            <p class="text-lg" data-aos="fade-up">We aim to provide comprehensive marketing solutions tailored to each
+                business’s unique
+                challenges and
+                objectives, helping them establish authority and drive long-term success.</p>
+        </div>
+    </section>
+
+    <section class="bg-[url(accets/images/hero-bg.jpg)] bg-cover bg-center bg-no-repeat overflow-hidden">
+        <div class="bg-[#000000d0] bg-opacity-90 h-full lg:py-20 py-10">
+            <div class="container mx-auto px-6 lg:max-w-[1000px] space-y-3">
+                <div class="grid md:grid-cols-2 items-center lg:gap-24 gap-10">
+                    <div class="" data-aos="fade-right">
+                        <div class="bg-white p-6 rounded-xl space-y-3 border border-slate-500">
+                            <div class="text-3xl capitalize font-semibold text-center">Get In Touch With Us</div>
+
+                            <form class="space-y-4" action="#">
+                                <input class="border border-slate-300 w-full rounded-md p-2 outline-none"
+                                    placeholder="Your Name" type="text">
+                                <input class="border border-slate-300 w-full rounded-md p-2 outline-none"
+                                    placeholder="Your Phone Number" type="text">
+                                <input class="border border-slate-300 w-full rounded-md p-2 outline-none"
+                                    placeholder="Email Address" type="text">
+                                <select
+                                    class="border border-slate-300 text-neutral-400 w-full rounded-md p-2 outline-none"
+                                    name="" id="">
+                                    <option class="" value="">Social Media Management</option>
+                                    <option class="" value="">Search Engine Optimization</option>
+                                    <option class="" value="">Email Marketing Services</option>
+                                    <option class="" value="">Videography/Photography</option>
+                                </select>
+                                <input class="border border-slate-300 w-full rounded-md p-2 outline-none"
+                                    placeholder="Message" type="text">
+                                <button
+                                    class="bg-black text-white hover:bg-primary duration-300 uppercase rounded-md w-full p-2">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4" data-aos="fade-left">
+                        <div class="lg:text-4xl text-2xl font-bold text-white">Take Action & Transform Your Brand</div>
+                        <div class="text-white lg:text-2xl"><span class="text-primary">Your success starts now!</span>
+                            Whether you need a brand refresh, lead generation, or a complete
+                            digital strategy, we’re here to help.</div>
+                        <div class="text-white lg:text-2xl"><span class="text-primary">Let’s talk. Let’s strategize.
+                                Let’s
+                                grow. <br> </span>
+                            Email: info@aurumhouse.com</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-10 overflow-hidden">
+        <div class="container mx-auto px-6 lg:max-w-[1200px] space-y-3">
+            <div class="text-xl font-semibold text-center text-primary" data-aos="fade-down">FAQ</div>
+            <div class="text-center text-4xl font-bold" data-aos="fade-down">Frequently Asked Questions</span>
+            </div>
+
+            <div class="border rounded-xl mx-auto block lg:w-[800px]" data-aos="fade-up">
+                <div class="my-8">
+                    <div class="accordian-head flex items-center justify-between px-4 cursor-pointer">
+                        <div class="text-lg font-medium align-middle mr-3">What sets Aurum House apart from other
+                            agencies?</div>
+                        <i
+                            class="ri-add-line bg-black text-white rounded-full px-[0.37rem] py-1 text-xs rotate-45 transition duration-500 ease-in-out"></i>
+                    </div>
+                    <div class="accordian-body acc-collapse text-slate-500 px-4" style="height: 48px;">We don’t do
+                        cookie-cutter marketing. Every strategy is uniquely crafted to fit your brand’s vision and
+                        goals.
+                    </div>
+                </div>
+                <div class="my-8">
+                    <div class="accordian-head flex items-center justify-between border-t px-4 pt-6 cursor-pointer">
+                        <div class="text-lg font-medium align-middle mr-3">What industries do you specialize in?</div>
+                        <i
+                            class="ri-add-line bg-slate-100 text-black rounded-full px-[0.37rem] py-1 text-xs transition duration-500 ease-in-out"></i>
+                    </div>
+                    <div class="accordian-body acc-collapse text-slate-500 px-4">We work across multiple industries:
+                        e-commerce, hospitality, tech startups, health & wellness, real estate, and
+                        professional services.
+                    </div>
+                </div>
+                <div class="my-8">
+                    <div class="accordian-head flex items-center justify-between border-t px-4 pt-6 cursor-pointer">
+                        <div class="text-lg font-medium align-middle mr-3">When will I see the results?
+                        </div>
+                        <i
+                            class="ri-add-line bg-slate-100 text-black rounded-full px-[0.37rem] py-1 text-xs transition duration-500 ease-in-out"></i>
+                    </div>
+                    <div class="accordian-body acc-collapse text-slate-500 px-4">
+                        Marketing is ongoing, but we provide quick wins and long-term strategies to ensure steady
+                        growth.
+                    </div>
+                </div>
+                <div class="my-8">
+                    <div class="accordian-head flex items-center justify-between border-t px-4 pt-6 cursor-pointer">
+                        <div class="text-lg font-medium align-middle mr-3">Can I customize my service package?
+                        </div>
+                        <i
+                            class="ri-add-line bg-slate-100 text-black rounded-full px-[0.37rem] py-1 text-xs transition duration-500 ease-in-out"></i>
+                    </div>
+                    <div class="accordian-body acc-collapse text-slate-500 px-4">
+                        Absolutely! We tailor our offerings to match your specific needs and budget.
+                    </div>
+                </div>
+                <div class="my-8">
+                    <div class="accordian-head flex items-center justify-between border-t px-4 pt-6 cursor-pointer">
+                        <div class="text-lg font-medium align-middle mr-3">Do you offer consultations before committing
+                            to a package?
+                        </div>
+                        <i
+                            class="ri-add-line bg-slate-100 text-black rounded-full px-[0.37rem] py-1 text-xs transition duration-500 ease-in-out"></i>
+                    </div>
+                    <div class="accordian-body acc-collapse text-slate-500 px-4">
+                        Yes! We offer a free strategy consultation to assess your needs and recommend the best approach.
+                    </div>
+                </div>
+                <div class="my-8">
+                    <div class="accordian-head flex items-center justify-between border-t px-4 pt-6 cursor-pointer">
+                        <div class="text-lg font-medium align-middle mr-3">How do I get started?
+                        </div>
+                        <i
+                            class="ri-add-line bg-slate-100 text-black rounded-full px-[0.37rem] py-1 text-xs transition duration-500 ease-in-out"></i>
+                    </div>
+                    <div class="accordian-body acc-collapse text-slate-500 px-4">
+                        Easy—just book a free strategy call, and we’ll outline the best path forward for your brand!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <div class="modal fixed top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 hidden z-20">
+        <div class="lg:w-[400px] md:w-[350px]">
+            <div class="bg-white p-6 rounded-xl space-y-3 border border-slate-500">
+                <div class="text-3xl capitalize font-semibold text-center">Get In Touch With Us</div>
+
+                <form class="space-y-4" action="#">
+                    <input class="border border-slate-300 w-full rounded-md p-2 outline-none" placeholder="Your Name"
+                        type="text">
+                    <input class="border border-slate-300 w-full rounded-md p-2 outline-none"
+                        placeholder="Your Phone Number" type="text">
+                    <input class="border border-slate-300 w-full rounded-md p-2 outline-none"
+                        placeholder="Email Address" type="text">
+                    <select class="border border-slate-300 text-neutral-400 w-full rounded-md p-2 outline-none" name=""
+                        id="">
+                        <option class="" value="">Which service are you interested in?</option>
+                    </select>
+                    <input class="border border-slate-300 w-full rounded-md p-2 outline-none" placeholder="Message"
+                        type="text">
+                    <button
+                        class="bg-black text-white hover:bg-primary duration-300 uppercase rounded-md w-full p-2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <section class="py-10 px-5 overflow-hidden space-y-6">
+        <div class="text-4xl font-bold text-center" data-aos="fade-down">Trusted by People Like You</div>
+        <div class="container mx-auto px-6 lg:max-w-[1200px] space-y-6">
+            <div class="responsive">
+                <div class="px-1">
+                    <div class="p-5 space-y-3 Testimonials-box border border-primary rounded-lg">
+                        <i class="ri-double-quotes-l text-2xl"></i>
+                        <p>Lorem ipsum dolor sit amet consectetur. Elit sociis consequat venenatis justo sed aenean amet
+                            lacus.Lorem ipsum dolor sit amet consectetur. Elit sociis consequat venenatis justo.</p>
+                        <img class="rounded-full object-cover h-[80px] w-[80px] block mx-auto"
+                            src="https://s3-alpha-sig.figma.com/img/f99c/65a7/cba234738afe23e65ac9e984758a9b62?Expires=1742774400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=fgDbmCRBmNcW~qIT1bHjtjcvFYmEvGxmQtM2bpHw0Gzx6lspFYZvWcIvV836j0qjI7xhFV0YlNiiDQzVhOoWPd6U1UltHfaPk06M-4FdcXSE9Omq9Kf3qUut~pya6~ooiyi40gsTCUopHkxEeQxKE~5KhjlPt9zJ3w7Ee4ELcWBOyTWAFfrbJUiRDncrq9hqrFUkBI64coimHKEBZLZtxlCGbQ6xVYKhEsq1SpNdqVk80RKx1I6Hbk03Kg7Ymq5VdlohWPuO5sJesHKMda1JWUhr7yaGaLs3irOZdjtdJakBwkqy1D3n3TT8WKQqEqUlJrpx7QjxJJRd2q3kXJXSBg__"
+                            alt="">
+                        <div class="text-center font-medium font-mono text-white text-xl tracking-[4px]">SOLANGE</div>
+                    </div>
+                </div>
+                <div class="px-1">
+                    <div class="p-5 space-y-3 Testimonials-box border border-primary   rounded-lg">
+
+                        <i class="ri-double-quotes-l text-2xl"></i>
+                        <p>Lorem ipsum dolor sit amet consectetur. Elit sociis consequat venenatis justo sed aenean amet
+                            lacus.Lorem ipsum dolor sit amet consectetur. Elit sociis consequat venenatis justo.</p>
+                        <img class="rounded-full object-cover h-[80px] w-[80px] block mx-auto"
+                            src="https://s3-alpha-sig.figma.com/img/da61/b1e2/15b91ff60ad9d1195c619a35a4741e09?Expires=1742774400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=TaLGhEMDyPwsz5gxGMQsthvBoIXDjh7p8zh0tWtu2Nc1yoKStyYQg6lhlqUFaCxQVl6Gpmpd2IPjLN6m2E2vDpAoXfmYSIdEyyE5hJAlUoGUzWy1vegLNkBEtmuiHwKx3MJjlLpk2t9Fk4vO14RhHdNhdMzrYIlfpx0RQgAlPaM2l7zV0XLJRDsGHVV-bkQvp8vQVBbx1jPTo4Po2ccDGSXoHkC~PF9NLQgUfCtvRto1OJ9kw29PzcZaqyrM78bFh-aFgN9lEosdYlmlajGYCwr0NEK1y2N78l99cjYwPA4h--HdBv0XRQoaoRgVB4qQglhyzDCLZ27UqxA1KhUCzg__"
+                            alt="">
+                        <div class="text-center font-medium font-mono text-white text-xl tracking-[4px]">hELEN</div>
+                    </div>
+                </div>
+                <div class="px-1">
+                    <div class="p-5 space-y-3 Testimonials-box border border-primary  rounded-lg">
+                        <i class="ri-double-quotes-l text-2xl"></i>
+                        <p>Lorem ipsum dolor sit amet consectetur. Elit sociis consequat venenatis justo sed aenean amet
+                            lacus.Lorem ipsum dolor sit amet consectetur. Elit sociis consequat venenatis justo.</p>
+                        <img class="rounded-full object-cover h-[80px] w-[80px] block mx-auto"
+                            src="https://s3-alpha-sig.figma.com/img/65c8/c510/e7879d90cf76e50961991c7c037e533a?Expires=1742774400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=nvdil4c5dKe078BMCO~je~Ki4UCX9fGLMjcDOjNrcftg6XBF7XGUvzLm3-YCLmoMpBwrIwpTKyCWlJ4HVYyLnUY-HVNVS1VGqM1K9jEltA0Ym7zaIIm2unMn~LB81ATzW0pafMs6WdMsakTXt~jkrN-WJLmL4F0WIIFayjiHNQ8TPTuI9yfW3WJy2R6UaUbMm5-vMf1dP8SQzZt-jxi-dO9vlphc~06lj2gLfe00YcezxAEW-TMSS2wD18PP2q0QTYKlGQ6scpPnQZ0-NXAZeQdEdHcj-H4MjB-IoTzjraPPt6RBH6NZ6iB43GHm29oS7kLNR6~mKOZ89i1Esv642g__"
+                            alt="">
+                        <div class="text-center font-medium font-mono text-white text-xl tracking-[4px]">REGINA</div>
+                    </div>
+                </div>
+                <div class="px-1">
+                    <div class="p-5 space-y-3 Testimonials-box border border-primary  rounded-lg">
+                        <i class="ri-double-quotes-l text-2xl"></i>
+                        <p>Lorem ipsum dolor sit amet consectetur. Elit sociis consequat venenatis justo sed aenean amet
+                            lacus.Lorem ipsum dolor sit amet consectetur. Elit sociis consequat venenatis justo.</p>
+                        <img class="rounded-full object-cover h-[80px] w-[80px] block mx-auto"
+                            src="https://s3-alpha-sig.figma.com/img/35ed/5d8b/cab1a77fc08e69960016a7b4894a5d21?Expires=1742774400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=SoSctE9pXXVRd2OMY2IBnPJW5renWGnXpWOep435PYImrZwUIK~L-E6Y09FNOFyHpiFVJcKsXyKEQtx-T7uPg0Z-W-GoQ-iXA8hTXUZcKG23aw5MVg54m-hw6uy-BN19xH~fM~toTpwaxPTKXDB6l33lj6lF0yTIlNExsTQqk9enYvoT6NWR0G5oxHlcu8ZrR9KmEUq1UjeDmnaCxvXGqkT1mL-Hr77KZnnp-HfdrgsfdmZciM~41Xk~yuVt2T9si-TOB-zruxATNI9kuWusOcl7WqKfa5yss-cCdcRuIiToF~8qSvkyL4llcfc6~Cykz0vjkweN2f7yP~2kGmEDzQ__"
+                            alt="">
+                        <div class="text-center font-medium font-mono text-white text-xl tracking-[4px]">THAÍS</div>
+                    </div>
+                </div>
+                <div class="px-1">
+                    <div class="p-5 space-y-3 Testimonials-box border border-primary  rounded-lg">
+                        <i class="ri-double-quotes-l text-2xl"></i>
+                        <p>Lorem ipsum dolor sit amet consectetur. Elit sociis consequat venenatis justo sed aenean amet
+                            lacus.Lorem ipsum dolor sit amet consectetur. Elit sociis consequat venenatis justo.</p>
+                        <img class="rounded-full object-cover h-[80px] w-[80px] block mx-auto"
+                            src="https://s3-alpha-sig.figma.com/img/35ed/5d8b/cab1a77fc08e69960016a7b4894a5d21?Expires=1742774400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=SoSctE9pXXVRd2OMY2IBnPJW5renWGnXpWOep435PYImrZwUIK~L-E6Y09FNOFyHpiFVJcKsXyKEQtx-T7uPg0Z-W-GoQ-iXA8hTXUZcKG23aw5MVg54m-hw6uy-BN19xH~fM~toTpwaxPTKXDB6l33lj6lF0yTIlNExsTQqk9enYvoT6NWR0G5oxHlcu8ZrR9KmEUq1UjeDmnaCxvXGqkT1mL-Hr77KZnnp-HfdrgsfdmZciM~41Xk~yuVt2T9si-TOB-zruxATNI9kuWusOcl7WqKfa5yss-cCdcRuIiToF~8qSvkyL4llcfc6~Cykz0vjkweN2f7yP~2kGmEDzQ__"
+                            alt="">
+                        <div class="text-center font-medium font-mono text-white text-xl tracking-[4px]">THAÍS</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class=" overflow-hidden">
+        <div class="bg-slate-100 bg-opacity-90 h-full lg:py-20 py-10">
+            <div class="container mx-auto text-center px-3 lg:max-w-[1000px] space-y-3">
+                <div class="md:text-4xl text-2xl text-black font-bold" data-aos="fade-right">Let’s Build Something
+                    Great Together.
+                </div>
+                <p class="text-black text-2xl" data-aos="fade-left">Your brand’s next level starts here.
+                </p>
+                <button
+                    class="modal-tog lg:inline hidden mx-auto bg-black text-white hover:bg-primary hover:text-white duration-300 px-4 py-2 rounded-3xl text-nowrap"
+                    data-aos="fade-up"><i
+                        class="ri-arrow-right-s-line bg-white text-black rounded-full p-1 text-xl"></i>
+                    &nbsp; GET IN TOUCH</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black text-white overflow-hidden">
+        <div class="container mx-auto px-6 lg:max-w-[1200px] py-12" data-aos="fade-up">
+            <div class="grid max-sm:text-center lg:grid-cols-4 md:gap-16 sm:gap-3 sm:grid-cols-3 grid-cols-1 gap-12">
+                <div class="lg:col-span-1 md:col-span-3">
+                    <a href="index.html">
+                        <img class="block mx-auto h-[150px] w-[150px]" src="accets/images/Logo.png" alt="">
+                    </a>
+                    <div class="my-4 text-sm">We don’t just market brands we build them. Whether you're a startup making
+                        your
+                        debut or an established business ready for the next level, we craft data driven, results focused
+                        marketing strategies that set you apart. </div>
+                </div>
+                <div>
+                    <div class="w-fit mx-auto">
+                        <ul class="space-y-2">
+                            <li><a class="text-xl text-primary font-semibold">About Us</a></li>
+                            <li><a class="text-sm" href="What-We-Do.html">What We Do</a></li>
+                            <li><a class="text-sm" href="How-It-Works.html">How It Works</a></li>
+                            <li><a class="text-sm" href="Pricing-and-Packages.html">Pricing and Packages</a></li>
+                            <li><a class="text-sm" href="Testimonials.html">Testimonials</a></li>
+                            <li><a class="text-sm" href="Contact-Us.html">Contact Us</a></li>
+                            <li><a class="text-sm" href="Blog.html">Blogs</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <div class="w-fit mx-auto">
+                        <ul class="space-y-2">
+                            <li><a class="text-xl text-primary font-semibold">Services</a></li>
+                            <li><a class="text-sm" href="Social-Media-Management.html">Social Media Management</a>
+                            </li>
+                            <li><a class="text-sm" href="Search-Engine-Optimization.html">Search Engine
+                                    Optimization</a>
+                            </li>
+                            <li><a class="text-sm" href="Email-Marketing-Services.html">Email Marketing Services</a>
+                            </li>
+                            <li><a class="text-sm" href="Videography-Photography.html">Videography/Photography</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <div class="w-fit mx-auto">
+                        <ul class="space-y-2">
+                            <li><a class="text-xl font-semibold text-primary">Newsletter</a></li>
+                            <li
+                                class="bg-white border overflow-hidden flex justify-between rounded-full md:w-auto w-[300px] mx-auto">
+                                <input class="outline-none text-neutral-600 text-sm pl-3 w-full" type="text"
+                                    placeholder="Enter your email here">
+                                <button
+                                    class="bg-neutral-800 hover:bg-primary hover:text-white duration-300 p-2 py-3 text-xs border-0">SUBSCRIBE</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-black">
+            <div class="container mx-auto px-6 lg:max-w-[1200px] md:border-t border-slate-700 py-3">
+                <div class="grid items-center max-sm:text-center md:grid-flow-col md:gap-5 gap-12">
+                    <div>
+                        <div class="font-semibold text-primary">Copyright by</div>
+                        <div>Aurum House Marketing Agency</div>
+                    </div>
+                    <div>
+                        <div class="font-semibold text-primary">Contact Us</div>
+                        <div>info@aurumhouse.com</div>
+                    </div>
+                    <div class="space-x-4 text-center">
+                        <i
+                            class="text-xl p-1 bg-white hover:bg-primary hover:text-white duration-300 cursor-pointer text-black rounded-md ri-facebook-line"></i>
+                        <i
+                            class="text-xl p-1 bg-white hover:bg-primary hover:text-white duration-300 cursor-pointer text-black rounded-md ri-instagram-line"></i>
+                        <i
+                            class="text-xl p-1 bg-white hover:bg-primary hover:text-white duration-300 cursor-pointer text-black rounded-md ri-linkedin-box-line"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            duration: 1000
+        });
+    </script>
+
+    <script>
+        AOS.init({
+            once: true,
+            duration: 1000
+        });
+
+
+        $('.responsive').slick({
+            dots: true,
+            infinite: true,
+            speed: 300,
+            autoplay: true,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            arrows: false,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                        infinite: true,
+                        dots: true
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        });
+
+    </script>
+</body>
+
+</html>
