@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+    @layer{
+        li::marker{
+            color: #C19A67;
+        }
+        i.ri-checkbox-circle-line{
+            color: #C19A67 !important;
+        }
+        .slick-dots li button:before {
+            font-size: 16px !important; 
+            color: #000;
+            margin-top: 10px !important; 
+        }
+        
+        
+    }
