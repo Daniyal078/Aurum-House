@@ -1,4 +1,5 @@
 li::marker {
+<<<<<<< HEAD
         content: "\f058   ";
         font-family: "Font Awesome 5 Free";
         font-size: 15px;
@@ -9,3 +10,22 @@ li::marker {
     footer li::marker{
         content: "";
     }
+=======
+    content: "\f058   ";
+    font-family: "Font Awesome 5 Free";
+    /* color: ; */
+    font-size: 15px;
+}
+
+nav li::marker {
+    content: "";
+}
+
+footer li::marker {
+    content: "";
+}
+
+.scroll-bar-none::-webkit-scrollbar {
+    width: 0;
+}
+>>>>>>> 6f4266e3a349bf318dad98745a98f8f6dfc341eb

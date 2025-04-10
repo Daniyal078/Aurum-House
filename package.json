@@ -3,8 +3,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+<<<<<<< HEAD
     "test": "echo \"Error: no test specified\" && exit 1",
     "start":"npx tailwindcss -i ./src/input.css -o ./src/output.css --watch"
+=======
+    "test": "echo \"Error: no test specified\" && exit 1"
+>>>>>>> 6f4266e3a349bf318dad98745a98f8f6dfc341eb
   },
   "keywords": [],
   "author": "",
