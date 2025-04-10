@@ -1,7 +1,6 @@
 li::marker {
         content: "\f058   ";
         font-family: "Font Awesome 5 Free";
-       
         font-size: 15px;
     }
     nav li::marker{
