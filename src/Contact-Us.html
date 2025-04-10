@@ -121,11 +121,10 @@
     </nav>
     <!-- navbar end -->
 
-    <section class="py-5 lg:px-10 px-3 overflow-hidden">
+    <section class="py-10 lg:px-10 overflow-hidden">
         <div class="container mx-auto px-6 lg:max-w-[1200px] space-y-4">
-            <div class="grid md:grid-cols-2 gap-6">
-                <div
-                    class="flex flex-col justify-between gap-5 p-7 text-white bg-black rounded-xl bg-right-bottom bg-[url('accets/images/img-423fd.png')] bg-no-repeat">
+            <div class="grid lg:grid-cols-5 md:grid-cols-2 lg:gap-16 gap-5">
+                <div class="lg:col-span-3 flex flex-col justify-between gap-5 p-7 text-white bg-black rounded-xl bg-right-bottom bg-[url('accets/images/img-423fd.png')] bg-no-repeat">
                     <div>
                         <div class="lg:text-3xl text-2xl font-semibold">Contact Information</div>
                         <div>Say something to start a live chat!</div>
@@ -146,58 +145,30 @@
                     </div>
                 </div>
 
-                <div class="space-y-7">
-                    <form class="space-y-7" action="#">
-                        <div class="grid grid-cols-2 gap-6">
-                            <div class="space-y-2">
-                                <label class="font-semibold" for="">First Name</label>
-                                <input class="border-b border-black outline-none py-2 w-full" type="text"
-                                    placeholder="First Name">
-                            </div>
-                            <div class="space-y-2">
-                                <label class="font-semibold" for="">First Name</label>
-                                <input class="border-b border-black outline-none py-2 w-full" type="text"
-                                    placeholder="Last Name">
-                            </div>
-                        </div>
+                <div class="lg:col-span-2 space-y-7">
+                    <div class="bg-white p-6 rounded-xl space-y-3 border border-slate-500">
+                        <div class="text-3xl capitalize font-semibold text-center">Get In Touch With Us</div>
 
-
-                        <div class="grid grid-cols-2 gap-6">
-                            <div class="space-y-2">
-                                <label class="font-semibold" for="">Email</label>
-                                <input class="border-b border-black outline-none py-2 w-full" type="text"
-                                    placeholder="First Name">
-                            </div>
-                            <div class="space-y-2">
-                                <label class="font-semibold" for="">Phone Number</label>
-                                <input class="border-b border-black outline-none py-2 w-full" type="text"
-                                    placeholder="Last Name">
-                            </div>
-                        </div>
-
-                        <div class="font-semibold">Which Service are you intrested in?</div>
-
-                        <ul class="flex flex-wrap gap-4">
-                            <li><input type="radio" name="check" id="01"> <label class="text-nowrap" for="01"> Social
-                                    Media Management</label></li>
-                            <li><input type="radio" name="check" id="02"> <label class="text-nowrap" for="02"> Search
-                                    Engine Optimization</label></li>
-                            <li><input type="radio" name="check" id="03"> <label class="text-nowrap" for="03"> Email
-                                    Campaigns</label></li>
-                            <li><input type="radio" name="check" id="04"> <label class="text-nowrap" for="04"> Website
-                                    Development</label></li>
-                            <li><input type="radio" name="check" id="05"> <label class="text-nowrap" for="05">
-                                    Videography/Photography</label></li>
-                        </ul>
-
-                        <div class="space-y-2">
-                            <label class="font-semibold" for="">Message</label>
-                            <input class="border-b border-black outline-none py-2 w-full" type="text"
-                                placeholder="Write your message..">
-                        </div>
-
-                        <button class="bg-black text-white px-4 py-2 rounded-md">Send Message</button>
-                    </form>
+                        <form class="space-y-4" action="#">
+                            <input class="border border-slate-300 w-full rounded-md p-2 outline-none"
+                                placeholder="Your Name" type="text">
+                            <input class="border border-slate-300 w-full rounded-md p-2 outline-none"
+                                placeholder="Your Phone Number" type="text">
+                            <input class="border border-slate-300 w-full rounded-md p-2 outline-none"
+                                placeholder="Email Address" type="text">
+                            <select class="border border-slate-300 text-neutral-400 w-full rounded-md p-2 outline-none"
+                                name="" id="">
+                                <option class="" value="">Social Media Management</option>
+                                <option class="" value="">Search Engine Optimization</option>
+                                <option class="" value="">Email Marketing Services</option>
+                                <option class="" value="">Videography/Photography</option>
+                            </select>
+                            <input class="border border-slate-300 w-full rounded-md p-2 outline-none"
+                                placeholder="Message" type="text">
+                            <button
+                                class="bg-black text-white hover:bg-primary duration-300 uppercase rounded-md w-full p-2">Submit</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>

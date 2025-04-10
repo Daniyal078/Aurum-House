@@ -10,6 +10,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css" />
+    <!-- <link href="custom.css" rel="stylesheet"> -->
 </head>
 <style>
     .price-plans::-webkit-scrollbar {
@@ -43,6 +44,9 @@
     .slick-slide .slick-cloned {
         width: 294px !important;
     }
+    .scroll-bar-none::-webkit-scrollbar {
+    width: 0;
+}
 </style>
 
 <body class="min-w-[360px]">
@@ -154,11 +158,10 @@
     <!-- navbar end -->
 
     <section class="py-10 overflow-hidden">
-        <div class="container mx-auto px-6 lg:max-w-[1200px] space-y-4">
+        <div class="container mx-auto lg:px-6 lg:max-w-[1200px] space-y-4">
             <div class="text-4xl font-bold text-center" data-aos="fade-down">Best Plans For Your Need</div>
-
             <div class="bg-white">
-                <nav class="tabs grid grid-flow-col overflow-x-auto gap-4 py-7">
+                <nav class="tabs grid grid-flow-col overflow-x-auto scroll-bar-none gap-4 py-7">
                     <button data-target="panel-1"
                         class="tab active bg-black text-white rounded-2xl px-3 text-center text-nowrap cursor-pointer py-2">
                         Website
@@ -180,7 +183,8 @@
                         Videography/Photography</button>
                 </nav>
             </div>
-
+        </div>
+        <div class="container mx-auto px-6 lg:max-w-[1200px] space-y-4">
             <div id="panels">
                 <div class="panel-1 tab-content active py-5">
                     <div class="responsive grid grid-cols-4 gap-x-3">
