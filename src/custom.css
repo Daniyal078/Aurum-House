@@ -1,15 +1,15 @@
-li::marker {
+li::before {
     content: "\f058   ";
     font-family: "Font Awesome 5 Free";
-    /* color: ; */
     font-size: 15px;
+    padding-right: 5px;
 }
 
-nav li::marker {
+nav li::before {
     content: "";
 }
 
-footer li::marker {
+footer li::before {
     content: "";
 }
 
