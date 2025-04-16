@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Navigation Toggle
     const navToggle = document.querySelector(".nav-Toggle");
+    const navClose = document.querySelector(".navClose");
     const responsiveNav = document.querySelector(".responsive-nav");
     const mask = document.querySelector(".mask");
     const modal = document.querySelector(".modal");
@@ -35,6 +36,13 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         mask.addEventListener("click", () => {
+            responsiveNav.classList.add("max-lg:-left-96");
+            responsiveNav.classList.remove("left-0");
+            document.body.style.overflowY = 'scroll'
+            mask.classList.add("hidden");
+            modal?.classList.add("hidden");
+        });
+        navClose.addEventListener("click", () => {
             responsiveNav.classList.add("max-lg:-left-96");
             responsiveNav.classList.remove("left-0");
             document.body.style.overflowY = 'scroll'

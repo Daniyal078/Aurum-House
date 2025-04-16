@@ -13,6 +13,14 @@ footer li::before {
     content: "";
 }
 
+.responsive li::before {
+    content: "";
+}
+
+.slick-dots {
+    bottom: -50px;
+}
+
 .scroll-bar-none::-webkit-scrollbar {
     width: 0;
 }
