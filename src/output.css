@@ -805,10 +805,6 @@ video {
   list-style-type: decimal;
 }
 
-.list-disc {
-  list-style-type: disc;
-}
-
 .grid-flow-col {
   grid-auto-flow: column;
 }
@@ -1263,6 +1259,14 @@ video {
   padding-left: 0.75rem;
 }
 
+.pl-6 {
+  padding-left: 1.5rem;
+}
+
+.pt-10 {
+  padding-top: 2.5rem;
+}
+
 .pt-6 {
   padding-top: 1.5rem;
 }
@@ -1462,6 +1466,26 @@ video {
 
 .ease-out {
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
+@layer{
+  li::marker{
+    color: #C19A67;
+  }
+
+  i.ri-checkbox-circle-line{
+    color: #C19A67 !important;
+  }
+
+  .slick-dots li button:before {
+    font-size: 16px !important;
+    color: #000;
+    margin-top: 20px !important;
+  }
+
+  .slick-dots >     li::before {
+    content: none !important;
+  }
 }
 
 .before\:relative::before {
@@ -1707,6 +1731,14 @@ video {
 
   .lg\:h-\[250px\] {
     height: 250px;
+  }
+
+  .lg\:h-\[600px\] {
+    height: 600px;
+  }
+
+  .lg\:w-\[100px\] {
+    width: 100px;
   }
 
   .lg\:w-\[400px\] {

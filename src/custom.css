@@ -1,9 +1,9 @@
-li::before {
-    content: "\f058   ";
-    font-family: "Font Awesome 5 Free";
-    font-size: 15px;
-    padding-right: 5px;
-}
+    li::before {
+        content: "\f058   ";
+        font-family: "Font Awesome 5 Free";
+        font-size: 15px;
+        padding-right: 5px;
+    }
 
 nav li::before {
     content: "";
